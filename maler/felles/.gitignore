@@ -1,0 +1,7 @@
+# Ignoreringer for arbeidsrommet
+
+# Workspace-fil er per bruker (ulike stier)
+*.code-workspace
+
+# Lokal Copilot-pref utenfor kiitos-modellen
+.github/copilot-pref.md
