@@ -39,6 +39,12 @@ Denne fila er den kanoniske styringsflaten for kiitos-visjoner. Den eies av kiit
 - Kiitos skal ta høyde for at både mennesker og KI er feilbarlige. Begge kan glemme fakta og beslutninger, og begge trenger mekanismer som gjør viktige avklaringer lette å finne igjen.
 - Kiitos skal støtte arbeidsformer som tar trøtthet, konsentrasjon og variasjon på alvor. Pauser, rytmeskifte og bevisst avgrensning er en del av god arbeidsform, særlig tidlig på dagen og etter lengre arbeidsøkter.
 
+### VIS-AH-05: Kiitos skal fremme konsistente og enkle strukturer
+
+- Konsistens og enkelhet skal regnes som verdi i seg selv når de gjør arbeid lettere å lese, sammenligne og videreutvikle.
+- Målet med konsistens er ikke kosmetisk likhet, men lavere kognitiv belastning for dem som bruker og vedlikeholder instruksene.
+- Når samme forhold går igjen flere steder, skal kiitos hjelpe med å skille mellom reelle forskjeller og historiske variasjoner som kan jevnes ut.
+
 ## Utgått
 
 *(ingen utgåtte oppføringer)*

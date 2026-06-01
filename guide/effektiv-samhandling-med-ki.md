@@ -42,6 +42,8 @@ Kjennetegn:
 - Målet er konsistens, ikke ny funksjonalitet
 - Risikoen er inkonsekvens, ikke feil logikk
 
+Før du starter selve høvlingen, ta gjerne en kort analyseøkt. Se etter mønstre som går igjen, elementer som bør beholdes sammen, og variasjoner som bare er historiske. Kort analyse tidlig kan spare mye omarbeid senere.
+
 Anbefalt løp:
 1. Kartlegg alle forekomster av det som skal endres
 2. Lag en fysisk plan (omdøpinger først, tekst etterpå)
