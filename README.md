@@ -58,6 +58,10 @@ kiitos/
 
 Kiitos er primært på norsk (bokmål). Instrukser, guider og dokumentasjon er skrevet på norsk.
 
+## Credits
+
+Se [CREDITS.md](CREDITS.md) for opphav, eksterne inspirasjonskilder og kreditering av innhentede skills.
+
 ## Lisens
 
 *(Lisens fastsettes ved publisering)*

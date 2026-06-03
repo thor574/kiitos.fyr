@@ -37,7 +37,7 @@ Full modus utvider DRY-sweepen til alle fire kontrollakser.
 1. Les `guide/instruksintegritet.md` først.
 2. Avgrens standard sweep til hele aktive kiitos-installasjonen, inkludert prosjektlokale `.kiitos/`-flater.
 3. Utelat som standard `journal/`, prosjektets `.kiitos/journal/`, `oppgaver/`, `oppgaver.mine/`, `analyse/` og andre historiske eller parkerte flater.
-4. Finn avvik per kontrollakse: `konsistens`, `lagvis DRY`, `korrekthet`, `rask oppslagsbarhet` og `intralenking`.
+4. Finn avvik per kontrollakse: `konsistens`, `lagvis DRY`, `korrekthet`, `rask oppslagsbarhet`, `skill-anatomi` og `intralenking`.
 5. Klassifiser hvert avvik som `trygg småretting`, `styringsløft`, `parkering` eller `manuell konflikt` før du retter noe.
 6. Utfør bare små, reversible rettinger med tydelig eierfil og lav konflikt.
 7. Valider direkte etter hver ryddepuls med målrettet søk eller editor-diagnostikk.
@@ -64,8 +64,31 @@ Maskinen skal ikke:
 - starte bred flerlagssats når én liten ryddepuls kan avklare retningen
 - la `SKILL.md` bli eier av regler som hører hjemme i guider eller styringsfiler
 
+## Anti-rasjonalisering
+
+| Fristelse | Hvorfor den er feil |
+|---|---|
+| «Jeg kan bare rette alle småtingene jeg ser.» | Integritetssjekken skal gjøre én liten ryddepuls om gangen, ellers blir eierlinjer og validering uklare. |
+| «Wrapperen beskriver nok; jeg trenger ikke lese guiden.» | `guide/instruksintegritet.md` eier kontrollreglene. Wrapperen er bare aktivering og lokale moduser. |
+| «Manglende skill-seksjoner kan fikses mekanisk overalt.» | Skill-anatomi skal migreres når skills endres vesentlig, ikke ved blind masseomskriving. |
+
+## Røde flagg
+
+- KI begynner å endre journal, oppgaver eller historiske flater uten eksplisitt brukerønske.
+- KI retter bredt i flere lag uten å klassifisere avvik først.
+- KI lar en wrapper overta regler som bør ligge i guide, styringsgrunnlag eller `kjerne.md`.
+- KI avslutter uten målrettet validering av endringen som faktisk ble gjort.
+
+## Verifikasjon
+
+- [ ] `guide/instruksintegritet.md` er brukt som kanonisk regelgrunnlag.
+- [ ] Hvert rettet avvik er klassifisert som `trygg småretting`, `styringsløft`, `parkering` eller `manuell konflikt` før retting.
+- [ ] Hver ryddepuls er validert med målrettet søk, editor-diagnostikk eller relevant kommando.
+- [ ] Hvis skill-filer ble endret, er `node scripts/valider-skills.js` kjørt eller bevisst utsatt med begrunnelse.
+
 ## Kanoniske referanser
 
 - `guide/instruksintegritet.md`
+- `guide/skill-anatomi.md`
 - `styringsgrunnlag/designvalg.md`
 - `velkommen.md`

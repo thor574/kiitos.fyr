@@ -73,6 +73,7 @@ Plasseringslogikk, personvernregler, journal-plassering og lagregel eies av [pla
 - Plassering og personvern: [plassering.md](plassering.md)
 - Søkeregler og arbeidsmønstre: [effektiv-samhandling-med-ki.md](effektiv-samhandling-med-ki.md)
 - Instruksintegritet og helsesjekk av aktive flater: [instruksintegritet.md](instruksintegritet.md)
+- Skill-anatomi for maskiner: [skill-anatomi.md](skill-anatomi.md)
 - Oppgaveparkering: [oppgave-parkering.md](oppgave-parkering.md)
 - Journalsystem: [journal-system.md](journal-system.md)
 - Preferanser: [preferanser.md](preferanser.md)

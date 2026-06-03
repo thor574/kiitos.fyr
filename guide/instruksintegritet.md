@@ -4,7 +4,7 @@ Denne guiden eier kontrollreglene for integritetssjekk av aktive kiitos-flater. 
 
 ## Hurtigoppslag
 
-- Kontrollakser: `konsistens`, `lagvis DRY`, `korrekthet`, `rask oppslagsbarhet`, `intralenking`
+- Kontrollakser: `konsistens`, `lagvis DRY`, `korrekthet`, `rask oppslagsbarhet`, `skill-anatomi`, `intralenking`
 - Standardomfang: hele aktive kiitos-installasjonen, inkludert prosjektlokale `.kiitos/`-flater
 - Standardutelatelser: `journal/`, `journal/`, prosjektets `.kiitos/journal/`, `oppgaver/`, `oppgaver.mine/`, `analyse/` og andre historiske eller parkerte flater
 - Tillatt auto-arbeid: små, reversible rettinger med tydelig eierfil og lav konflikt
@@ -59,6 +59,18 @@ Minstekrav for operative filer:
 - tydelig neste peker når leseren må videre
 
 Hvis dette ikke kan forstås ved en kort skumlesing, er fila ikke raskt oppslagsbar nok.
+
+### Skill-anatomi
+
+Kontroller at aktive skills følger grunnkontrakten i `guide/skill-anatomi.md`, uten å bryte kiitos-mønsteret med aktiveringswrappere og kanoniske eierfiler.
+
+Typiske avvik:
+
+- `name` i frontmatter samsvarer ikke med mappenavnet
+- `description` mangler tydelig bruksutløser
+- en operativ skill mangler verifikasjon, røde flagg eller anti-rasjonalisering når den endres vesentlig
+- en aktiveringswrapper skjuler hvilken fil som eier hovedreglene
+- validatoren i `scripts/valider-skills.js` gir strukturelle feil
 
 ### Intralenking
 
@@ -136,5 +148,6 @@ Stopp auto-retting og rapporter tydelig når ett av disse gjelder:
 - `velkommen.md`
 - `styringsgrunnlag/designvalg.md`
 - `styringsgrunnlag/begrepsmatrise.md`
+- `guide/skill-anatomi.md`
 - `.github/skills/integritetsjustere-kiitos/SKILL.md`
 - `.github/skills/regelflyt/SKILL.md`
