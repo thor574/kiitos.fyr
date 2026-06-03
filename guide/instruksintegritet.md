@@ -6,7 +6,7 @@ Denne guiden eier kontrollreglene for integritetssjekk av aktive kiitos-flater. 
 
 - Kontrollakser: `konsistens`, `lagvis DRY`, `korrekthet`, `rask oppslagsbarhet`, `skill-anatomi`, `intralenking`
 - Standardomfang: hele aktive kiitos-installasjonen, inkludert prosjektlokale `.kiitos/`-flater
-- Standardutelatelser: `journal/`, `journal/`, prosjektets `.kiitos/journal/`, `oppgaver/`, `oppgaver.mine/`, `analyse/` og andre historiske eller parkerte flater
+- Standardutelatelser: `journal/`, prosjektets `.kiitos/journal/`, `oppgaver/`, `oppgaver.mine/`, `analyse/` og andre historiske eller parkerte flater
 - Tillatt auto-arbeid: små, reversible rettinger med tydelig eierfil og lav konflikt
 - Stoppsignaler: uklart eierskap, divergerende sannhet, historikk som primærkilde, kontraktrisiko eller behov for nytt styringsvalg
 
@@ -100,7 +100,6 @@ Bruk journaler som evidenskilde når det trengs for å avgjøre hva som er nyere
 
 Disse flatene er som hovedregel ute av scope og tas bare med etter eksplisitt brukerønske eller tydelig behov for evidens:
 
-- `journal/`
 - `journal/`
 - prosjektets `.kiitos/journal/`
 - `oppgaver/`
