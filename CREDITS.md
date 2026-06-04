@@ -31,6 +31,19 @@ Kiitos lånte særlig fire mønstre fra dette arbeidet:
 
 Dette ble innarbeidet som kiitos-standard i `guide/skill-anatomi.md`, `guide/instruksintegritet.md` og `scripts/valider-skills.js`, med kiitos sin egen wrappermodell og lagvise faktaeierskap beholdt.
 
+### Bito AI Architect: sammenhengskart, arbeidsstrømspesifikasjoner og kompleksitetsstyring
+
+I juni 2026 ble [Bito AI Architect](https://docs.bito.ai/ai-architect/key-features), laget av Bito, vurdert som inspirasjon for kiitos.
+
+Kiitos lånte særlig fire mønstre fra dette arbeidet:
+
+1. relasjonsbasert systemkontekst som inspirasjon til kiitos-begrepet `sammenhengskart`
+2. selvstendige arbeidsstrømspesifikasjoner for større eller tverrgående arbeid
+3. kompleksitetsstyrt triage før tyngre agentflyt aktiveres
+4. iterativ planrevisjon når krav, funn eller premisser endrer seg
+
+Dette ble innarbeidet som kiitos-prinsipper i `styringsgrunnlag/designvalg.md` (`DV-KIITOS-20` til `DV-KIITOS-22`), med kiitos sin egen lagmodell, norske begreper, lagvise DRY og krav om bevisbar verifikasjon beholdt. Kiitos tar ikke inn Bito som verktøyavhengighet eller produktintegrasjon.
+
 ## Ved nye lån
 
 Når nye eksterne skills, mønstre eller formuleringer tas inn i kiitos:
@@ -40,3 +53,4 @@ Når nye eksterne skills, mønstre eller formuleringer tas inn i kiitos:
 3. Skill mellom direkte innhentet materiale, bearbeidet materiale og ren inspirasjon.
 4. Følg opprinnelig lisens når materialet har lisensvilkår.
 5. Plasser varige kiitos-regler i riktig kanonisk eierfil, ikke bare i en importert skill.
+6. Når bidraget er avgrenset og relevante spesifikasjonskoder eller andre referansekoder finnes, knytt krediteringen til de konkrete kodene i stedet for å antyde bredere opphav.

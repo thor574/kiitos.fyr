@@ -38,6 +38,7 @@ Kommando-ord: Skriv **innfør termer** når du vil at jeg skal implementere vedt
 ## Aksepterte forslag (implementert)
 
 - ADR → **ARV**
+- Agent spec / agent-spesifikasjon → **arbeidsstrømspesifikasjon**
 - arbeitsflyter → **arbeidsflyter**
 - backend → **innside**
 - Breaking change → **kontraktbrudd**
@@ -71,6 +72,7 @@ Kommando-ord: Skriv **innfør termer** når du vil at jeg skal implementere vedt
 - image → **avbildning** i byggekontekst, **bilde** i fotokontekst
 - Issue / ticket → **sak**
 - keys → **nøkler**
+- Knowledge graph → **sammenhengskart**
 - label → **etikett**
 - local storage / localStorage → **lokallager**
 - log/logs → **logg** i entall, **logger** i flertall
