@@ -81,3 +81,71 @@ Fullført. `git diff --check` og VS Code-diagnostikk er kjørt for de berørte d
 > Ja, commit dette.
 
 Brukeren ba om commit av virksomhetsintro-endringene. Det lages én commit i `kiitos.fyr` for delte intro- og journalendringer, og én commit i `kiitos.ruff.th` for privat journalføring av personlige detaljer.
+
+
+
+# KI-instruks 4
+> Ta en runde og vurder dette fra mottakerne.  Får de en god opplevelse uten altfor mye detaljer?  Kan vi kutte ut noe?
+
+## Problem: Mottakerreview av virksomhetsintroen
+
+Brukeren ba om en vurdering av introen sett fra mottakernes side, med særlig vekt på om opplevelsen er god nok uten for mye detaljering, og om noe bør kuttes.
+
+### Vurdering
+
+Hovedideen var god, men hovedintroen hadde fortsatt litt for mye dokumentpreg for en førsteopplevelse. Den hadde åtte nummererte stopp pluss valgfri personlig åpning, og flere av poengene gjentok hverandre: personlig retning, ikke kopiere strukturen, og at skriftlig retning virker.
+
+Mottakerhypotesen er at introen fungerer bedre som seks klare øyeblikk:
+
+- KI arbeider fra det den ser.
+- Kiitos gjorde mer av egen kunnskap brukbar i arbeidet.
+- Mottakeren må eie sin egen retning.
+- Én startfil er nok for å begynne.
+- Kunnskap bør ligge på riktig nivå.
+- Start med det du vil slippe å forklare på nytt.
+
+### Endringer utført
+
+- Kuttet egen «Valgfri personlig åpning»-seksjon og flettet «kast deg ut i det»-poenget inn i «Hva det ga meg».
+- Kuttet hovedintroen fra åtte til seks presentasjonsdeler.
+- Slo sammen «Det starter personlig» og «Det er ikke et ferdig system» til «Du eier retningen».
+- Slo sammen «Hvorfor det virker» og «Kunnskap har område» til en kortere del om riktig kunnskap på riktig sted.
+- Markerte [spesifisert-kunnskap.md](../../guide/virksomhetsintro/spesifisert-kunnskap.md) som teknologinær etterlesning, ikke generell førstevei.
+- Oppdaterte [LESMEG.md](../../LESMEG.md) med samme teknologinære merking.
+
+### Validering
+
+- `git diff --check` er kjørt for [guide/virksomhetsintro/README.md](../../guide/virksomhetsintro/README.md) og [LESMEG.md](../../LESMEG.md) uten funn.
+- VS Code-diagnostikk er kjørt for de samme filene uten funn.
+
+### Status
+
+Fullført. Hovedintroen er kortere og mer mottakerrettet, mens detaljene fortsatt ligger i støttefilene.
+
+
+
+# KI-instruks 5
+> Dette med enhetstester er jo også dokumentasjon av koden; dette er nyttig også for KI tror jeg.  Er det sant?  Dette kan være nyttig å ha med, hvis sant.
+
+## Problem: Avklare om enhetstester bør omtales som dokumentasjon for KI
+
+Brukeren spurte om enhetstester også er dokumentasjon av koden, og om dette er nyttig for KI.
+
+### Vurdering
+
+Ja, med forbehold. Enhetstester er ikke full dokumentasjon, men de er kjørbar dokumentasjon av forventet oppførsel. For KI kan gode tester være nyttige fordi de viser konkrete eksempler på inndata, forventet utdata, kanttilfeller og hvilke oppførsler som allerede er avtalt. Tester kan likevel være ufullstendige, utdaterte eller for smale, så KI og mennesker må fortsatt vurdere dem kritisk.
+
+### Endringer utført
+
+- Oppdaterte [guide/virksomhetsintro/spesifisert-kunnskap.md](../../guide/virksomhetsintro/spesifisert-kunnskap.md) med en kort seksjon om tester som dokumentasjon for mennesker og KI.
+
+### Status
+
+Fullført. `git diff --check` og VS Code-diagnostikk er kjørt for støttefila og journalen uten funn.
+
+
+
+# KI-instruks 6
+> Flott!  commit.
+
+Brukeren ba om commit av siste innstramming av virksomhetsintroen. Endringene committes i `kiitos.fyr`.

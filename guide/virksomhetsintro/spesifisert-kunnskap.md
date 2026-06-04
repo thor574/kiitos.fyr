@@ -30,6 +30,14 @@ Det fungerer som en tvangstrøye for programkoden:
 
 Testene gjør ikke koden automatisk riktig, men de gir en tydeligere avtale om hva riktig betyr.
 
+## Tester som dokumentasjon
+
+Enhetstester er også en form for dokumentasjon. Ikke full dokumentasjon, men kjørbar dokumentasjon av forventet oppførsel.
+
+Dette er nyttig for mennesker, og det kan også være nyttig for KI. Når KI leser gode tester, ser den konkrete eksempler på hva koden skal gjøre, hvilke inndata som betyr noe, hvilke utdata som forventes, og hvilke kanttilfeller noen allerede har brydd seg om.
+
+Forbeholdet er viktig: tester kan være ufullstendige, gamle eller for smale. De dokumenterer ikke hele systemet. Men når testene er gode og oppdaterte, er de ofte mer presise enn fritekst fordi de både beskriver og kontrollerer oppførsel.
+
 ## Parallellen til KI
 
 KI-samarbeid har ikke en like presis tvangstrøye som programkode og tester.

@@ -11,7 +11,7 @@ Kiitos er en enkel arbeidsmåte for å gjøre KI mer nyttig: skriv ned retning, 
 | Få en kort og motiverende intro for alle | [guide/virksomhetsintro/README.md](guide/virksomhetsintro/README.md) |
 | Bygge din egen lille kiitos | [guide/virksomhetsintro/bygg-din-kiitos.md](guide/virksomhetsintro/bygg-din-kiitos.md) |
 | Forstå lag, domener og hva som hører hjemme hvor | [guide/virksomhetsintro/lag-og-domener.md](guide/virksomhetsintro/lag-og-domener.md) |
-| Forstå parallellen mellom kode, tester og KI-instrukser | [guide/virksomhetsintro/spesifisert-kunnskap.md](guide/virksomhetsintro/spesifisert-kunnskap.md) |
+| Se en teknologinær parallell til kode, tester og KI-instrukser | [guide/virksomhetsintro/spesifisert-kunnskap.md](guide/virksomhetsintro/spesifisert-kunnskap.md) |
 | Forstå den operative kiitos-modellen | [guide/kiitos.md](guide/kiitos.md) |
 | Koble kiitos fysisk inn i VS Code | [guide/installasjon.md](guide/installasjon.md) |
 
