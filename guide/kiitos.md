@@ -2,6 +2,8 @@
 
 Kiitos er et universelt KI-instruksrammeverk for VS Code. Det gir struktur, konvensjoner og gjenbrukbare instrukser som lar utviklere jobbe bedre med KI-assistenter — alene og i lag.
 
+Vil du først ha en kort intro for hele virksomheten, uten alle operative detaljer? Start med [virksomhetsintroen](virksomhetsintro/README.md).
+
 ## Lagmodell
 
 Kiitos har fire lag og to dimensjoner:
@@ -70,6 +72,7 @@ Plasseringslogikk, personvernregler, journal-plassering og lagregel eies av [pla
 
 ## Videre
 
+- Virksomhetsintro for alle: [virksomhetsintro/README.md](virksomhetsintro/README.md)
 - Plassering og personvern: [plassering.md](plassering.md)
 - Søkeregler og arbeidsmønstre: [effektiv-samhandling-med-ki.md](effektiv-samhandling-med-ki.md)
 - Instruksintegritet og helsesjekk av aktive flater: [instruksintegritet.md](instruksintegritet.md)

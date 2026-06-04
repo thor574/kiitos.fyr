@@ -2,6 +2,8 @@
 
 Kiitos er et universelt KI-instruksrammeverk. Det gir struktur, konvensjoner og gjenbrukbare instrukser som lar utviklere jobbe bedre med KI-assistenter — alene og i lag.
 
+Start i [LESMEG.md](LESMEG.md) hvis du vil ha en menneskevendt inngang. Den peker blant annet til en kort [virksomhetsintro](guide/virksomhetsintro/README.md) for alle, uansett bakgrunn.
+
 ## Hva kiitos gjør
 
 - **Konsistente KI-instrukser** på tvers av prosjekter og laug
