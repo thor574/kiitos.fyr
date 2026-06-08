@@ -103,6 +103,7 @@ Dette gjør at jeg starter i riktig kunnskapsflate i stedet for å blande aktiv 
 - «Gjør en review: kun bugs, regresjonsrisiko og manglende tester.»
 - «Lag meg en kort plan med 3 steg, så utfør steg 1 med en gang.»
 - «Bruk grundig løp: vi tar grov plan i Ask, detaljplan i Plan, og implementering først når jeg sier start.»
+- «Start en evaluering av [prosjekt/komponent] med Bastøes rammeverk fra `guide/evalueringsrammeverk.md`»
 
 ## 7. Når du vil ha jevnlige hint
 

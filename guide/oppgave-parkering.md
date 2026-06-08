@@ -9,6 +9,7 @@ Formål: holde fart og fokus i aktiv sak, uten å miste forbedringer som oppdage
 - Parker delbare funn i `oppgaver/` som én fil per oppgave.
 - Parker brukerprivate eller maskinlokale funn i `oppgaver.mine/` når saken ikke hører hjemme i den delte oppgavehaugen.
 - Hvis sidefunnet er at arbeidsrommet mangler en nyttig agent, parker det som en egen `ki`-oppgave, si kort fra til brukeren og fortsett aktiv oppgave.
+- Evalueringsrelaterte oppgaver bør plasseres i `oppgaver/evaluering/` med referanse til `guide/evalueringsrammeverk.md`
 
 ## Valg av samling
 

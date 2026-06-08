@@ -31,6 +31,7 @@ Når et stabilt og normgivende valg avklares i samtalen eller arbeidet, og det g
 - `DV-KIITOS-20`: Kiitos kan bruke `sammenhengskart` som begrep for eksplisitte koblinger mellom kode, oppgaver, journal, styringsvalg, driftsfunn og andre evidenskilder. Sammenhengskart er ikke et nytt kunnskapslag; stabile fakta skal fortsatt ligge i kanonisk eierfil, mens kartet viser relasjoner, risiko og relevante pekere.
 - `DV-KIITOS-21`: Større, uklare eller tverrgående endringer bør ved behov deles i `arbeidsstrømspesifikasjoner` før implementering starter. En slik spesifikasjon skal beskrive avgrensning, relevante fil- eller symbolankre, avhengighetskontrakter, forventede leveranser og verifikasjonsporter, men skal ikke gjøre enkel lokal feilretting tyngre enn nødvendig.
 - `DV-KIITOS-22`: Tyngre agentflyt skal utløses av kompleksitet, uklarhet, kontraktrisiko eller tverrprosjektlig konsekvens, ikke av vane. Enkle og lokale saker kan behandles direkte, mens saker med høyere risiko skal rutes gjennom passende speider-, triagerings-, harmoniserings- eller review-maskin med kort begrunnelse for valget.
+- `DV-KIITOS-23`: Evalueringer skal følge Bastøes fem forutsetninger definert i `guide/evalueringsrammeverk.md`. Alle evalueringsaktiviteter skal ha tydelig formål, systematisk prosess og kvalitetssikring.
 
 ## Kodekartlegging fra gen4
 

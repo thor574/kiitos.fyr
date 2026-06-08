@@ -52,6 +52,7 @@ Personlige preferanser skal ikke lenger ligge som innsjekket fasit i denne filen
 ## Modulstyring av delte guider
 
 - `guide/preferanser.md` beskriver modellen og styres ikke selv som av/på-modul.
+- `guide/evalueringsrammeverk.md` kan styres med `på`, `ved behov` eller `av` for evalueringsmodulen
 - `på` betyr at KI skal bruke modulen som standard når saken treffer den.
 - `ved behov` betyr at KI skal lese modulen bare når saken tydelig trenger den.
 - `av` betyr at KI ikke skal lese modulen uten eksplisitt beskjed fra bruker eller fra en mer spesifikk aktiv instruksfil.

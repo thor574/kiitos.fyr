@@ -22,6 +22,9 @@ Ved tvil: velg laveste riktige lag. Løft oppover bare når innholdet er stabilt
 | Innholdstype | Lag | Plassering |
 |---|---|---|
 | Universelle KI-instrukser og arbeidsmåter | Fyr | `kiitos.fyr/guide/` |
+| Universelle evalueringsprinsipper og standarder | Fyr | `kiitos.fyr/guide/evalueringsrammeverk.md` |
+| Prosjektspesifikke evalueringer | Prosjekt | `.kiitos/evaluering/` |
+| Evalueringsjournaler | Prosjekt | `.kiitos/journal/evalueringer/` |
 | Begreper og navnekonvensjoner | Fyr | `kiitos.fyr/styringsgrunnlag/begrepsmatrise.md` |
 | Designvalg og universelle føringer | Fyr | `kiitos.fyr/styringsgrunnlag/designvalg.md` |
 | Skills (delte) | Fyr | `kiitos.fyr/.github/skills/` |

@@ -85,6 +85,15 @@ Typiske avvik:
 
 Verifiser ved å resolvre relativ sti fra kildefilens plassering. Historiske flater (`journal/`, `analyse/`) er unntatt med mindre bruker ber om det.
 
+### Evalueringskonsistens
+
+Kontroller at evalueringer følger rammeverket i `guide/evalueringsrammeverk.md`.
+
+Typiske avvik:
+- evaluering mangler tydelig formålsbeskrivelse
+- evalueringsprosess ikke i tråd med Bastøes fem forutsetninger
+- evaluering ikke kvalitetssikret mot standarder
+
 ## Standardomfang
 
 Som standard kontrolleres aktive kiitos-flater i hele installasjonen:

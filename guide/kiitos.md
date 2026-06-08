@@ -80,4 +80,5 @@ Plasseringslogikk, personvernregler, journal-plassering og lagregel eies av [pla
 - Oppgaveparkering: [oppgave-parkering.md](oppgave-parkering.md)
 - Journalsystem: [journal-system.md](journal-system.md)
 - Preferanser: [preferanser.md](preferanser.md)
+- Evalueringsrammeverk: [evalueringsrammeverk.md](guide/evalueringsrammeverk.md)
 - Fysisk påmønstring: [installasjon.md](installasjon.md)

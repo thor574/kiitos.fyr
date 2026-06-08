@@ -121,6 +121,7 @@ For komplekse oppgaver med kodeendringer, behold grunnformatet og legg til struk
 - Automatisk og fortløpende: journalføring skjer uten ekstra beskjed og legges løpende nederst i samme fil.
 - Append-only først: hvis kronologi eller nummerering ser skjev ut, legg neste ledd nederst og parker eventuell filopprydding separat.
 - Korrekt norsk: behold `æ`, `ø` og `å` i journaltekst, med mindre et konkret teknisk krav tvinger noe annet.
+- Evalueringsjournaler skal følge formatet definert i `guide/evalueringsrammeverk.md` og lagres i `journal/evalueringer/`
 
 ## Avslutningsopprydding
 
