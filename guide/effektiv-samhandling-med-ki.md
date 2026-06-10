@@ -64,10 +64,29 @@ Personlige modellvalg for hvert steg kan settes i `.github/copilot-kiitos-pref.m
 
 ### Vær økonomisk med modellvalg
 
-- Start med minste nødvendige instruksflate og en rimelig modell når saken er lokal, tydelig og lett å verifisere.
+Vi skiller mellom en "fersk" og "erfaren" KI i samme samtale. I starten er KI fersk til stoffet. Etter avklaringer og arbeid i samme tråd blir KI mer erfaren på saken.
+
+Ramme og kapasitet:
+- Instruksfiler huskes normalt gjennom den aktive samtalen og leses ikke på nytt før saken trenger mer kontekst eller en annen instruksflate.
+- Context compression kan endre hvordan kontekst bæres videre i lange samtaler, og kan påvirke kost per videre instruks.
+- Kapasitet kan være begrenset lokalt i virksomheten, for eksempel 12 000 credits per ansatt per måned. Dette håndteres dels av virksomheten og dels av den ansatte gjennom modellvalg.
+
+Omtrentlige kosteksempler:
+- 1 credit: En fersk KI svarer kort og direkte på en ukomplisert instruks [GPT 5.3-codex].
+- 2 credits: En fersk KI svarer med et par avsnitt på en ukomplisert instruks [GPT 5.3-codex].
+- 5 credits: En erfaren KI redigerer en fil [GPT 5.4].
+- 20 credits: En fersk KI leser kiitos-filer, resonnerer og utvider filer [GPT 5.4].
+- 25 credits: En erfaren KI redigerer filer, journalfører og committer [GPT 5.4].
+- 40-100 credits: Større filendringer kan koste betydelig mer, avhengig av størrelse og kompleksitet [GPT 5.4].
+- 150-600 credits: Større filendringer kan koste betydelig mer, avhengig av størrelse og kompleksitet [GPT 5.5 / Opus 4.6].
+
+Hvorfor øker kostnadene i noen løp?
 - Fra 1. juni 2026 gjorde kraftigere modeller som GPT5.5 mange arbeidsøkter merkbart dyrere, ofte rundt 2x-3x mot tidligere normalnivå.
 - Opus var også tilgjengelig fram til juni og lå ofte rundt 3x over tidligere standardnivå.
-- Modellvalg på `auto` gir 10 % tilleggsrabatt, og er fornuftig når den rimelige `5.3-codex` ofte velges automatisk.
+
+Hvordan redusere kostnader:
+- Start med minste nødvendige instruksflate og en rimelig modell når saken er lokal, tydelig og lett å verifisere.
+- Modellvalg på `auto` gir litt rabatt, og er ofte fornuftig når den rimelige `5.3-codex` velges automatisk.
 - Bruk de største modellene når saken faktisk trenger bred lesing, mye inn- og utdata, tverrgående opprydding eller vanskelig syntese.
 - Legg gjerne tyngre ryddejobber til en egen månedsoppvask, for eksempel mot slutten av måneden, i stedet for å spre dem tilfeldig utover i småsaker.
 
