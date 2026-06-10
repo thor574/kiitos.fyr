@@ -12,6 +12,7 @@ Kiitos er et universelt KI-instruksrammeverk for VS Code. Denne filen er den ope
 - Svar og dokumentasjon skal som hovedregel være på norsk (bokmål) når det passer.
 - Rotens `AGENTS.md` og `.github/copilot-instructions.md` er tynne innganger som peker hit.
 - Hold deg til aktiv sak. Parker sidefunn i laugets `oppgaver/`.
+- Vær økonomisk i bruk av KI: velg minste nødvendige instruksflate og rimeligste modell som løser saken, og spar tunge modelløp til uklare, tverrgående eller datatunge oppgaver.
 - Norske ord beholdes med korrekt rettskrivning — ikke ASCII-normaliser `æ`, `ø` eller `å`.
 - Når stabile ord, visjoner, mål eller arkitekturvalg avklares, løft til laveste riktige styringsfil.
 - Plassering av innhold, personvern og journal-lag eies av [guide/plassering.md](guide/plassering.md).

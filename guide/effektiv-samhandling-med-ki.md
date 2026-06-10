@@ -62,6 +62,15 @@ Et arbeidsmønster for større oppgaver der riktig rekkefølge er viktigere enn 
 
 Personlige modellvalg for hvert steg kan settes i `.github/copilot-kiitos-pref.md`.
 
+### Vær økonomisk med modellvalg
+
+- Start med minste nødvendige instruksflate og en rimelig modell når saken er lokal, tydelig og lett å verifisere.
+- Fra 1. juni 2026 gjorde kraftigere modeller som GPT5.5 mange arbeidsøkter merkbart dyrere, ofte rundt 2x-3x mot tidligere normalnivå.
+- Opus var også tilgjengelig fram til juni og lå ofte rundt 3x over tidligere standardnivå.
+- Modellvalg på `auto` gir 10 % tilleggsrabatt, og er fornuftig når den rimelige `5.3-codex` ofte velges automatisk.
+- Bruk de største modellene når saken faktisk trenger bred lesing, mye inn- og utdata, tverrgående opprydding eller vanskelig syntese.
+- Legg gjerne tyngre ryddejobber til en egen månedsoppvask, for eksempel mot slutten av måneden, i stedet for å spre dem tilfeldig utover i småsaker.
+
 ## 3. Be om riktig svarform
 
 - «Kort svar, kun endringer og status.»
