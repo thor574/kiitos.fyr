@@ -121,3 +121,4 @@ Hvis et verktøy likevel mangler i miljøet, skal KI falle tilbake til innebygde
 - `create_file` kan i enkelte tilfeller skrive literal `\u00xx`-sekvenser i stedet for ekte UTF-8-tegn når norsk tekst opprettes.
 - Hvis KI bruker `create_file` til tekst med `æ`, `ø` eller `å`, skal resultatet verifiseres med målrettet søk før arbeidet regnes som ferdig.
 - Hvis slike sekvenser faktisk ble skrevet, skal de erstattes med de reelle tegnene før filen tas i bruk videre.
+- Ved store filendringer med `apply_patch`: del patchen opp i mindre biter tidlig hvis den blir stor, i stedet for å sende én svært stor patch. Dette reduserer risiko for patchfeil og gir mer robust redigering.

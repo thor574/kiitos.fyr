@@ -31,6 +31,7 @@ Typiske avvik:
 - samme standardregel gjentas i flere guider eller inngangsflater
 - lokal wrapper bærer delbar kjerne som allerede har egen eierfil
 - en ikke-eierfil prøver å eie steg, unntak eller standardverdier som skal bo lavere eller mer kanonisk
+- privat pref gjengir delte regler i fulltekst i stedet for kort lokal kontekst med peker til eierfil
 
 Bruk relevante designvalg i `styringsgrunnlag/designvalg.md`, særlig de som handler om lagdeling, faktaeierskap, delt kjerne kontra lokal wrapper og rask oppslagsbarhet, når eierskapet vurderes.
 

@@ -1,6 +1,6 @@
 # Designvalg for kiitos (universelt)
 
-## Sist revidert: 2026-06-03
+## Sist revidert: 2026-06-18
 
 Gjeldende universelle standarder og føringer for utforming av kiitos-modellen.
 Designvalg er normgivende og kan revideres, i motsetning til ARV-er som er historiske.
@@ -32,6 +32,7 @@ Når et stabilt og normgivende valg avklares i samtalen eller arbeidet, og det g
 - `DV-KIITOS-21`: Større, uklare eller tverrgående endringer bør ved behov deles i `arbeidsstrømspesifikasjoner` før implementering starter. En slik spesifikasjon skal beskrive avgrensning, relevante fil- eller symbolankre, avhengighetskontrakter, forventede leveranser og verifikasjonsporter, men skal ikke gjøre enkel lokal feilretting tyngre enn nødvendig.
 - `DV-KIITOS-22`: Tyngre agentflyt skal utløses av kompleksitet, uklarhet, kontraktrisiko eller tverrprosjektlig konsekvens, ikke av vane. Enkle og lokale saker kan behandles direkte, mens saker med høyere risiko skal rutes gjennom passende speider-, triagerings-, harmoniserings- eller review-maskin med kort begrunnelse for valget.
 - `DV-KIITOS-23`: Evalueringer skal følge Bastøes fem forutsetninger definert i `guide/evalueringsrammeverk.md`. Alle evalueringsaktiviteter skal ha tydelig formål, systematisk prosess og kvalitetssikring.
+- `DV-KIITOS-24`: Privat kiitos-pref kan referere delte regler kun som kort lokal kontekst med tydelig peker til kanonisk eierfil. Delte regler, standardverdier og prosessdetaljer skal fortsatt eies av delte guider eller styringsfiler, ikke av privat pref.
 
 ## Kodekartlegging fra gen4
 

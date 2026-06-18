@@ -45,6 +45,7 @@ Personlige preferanser skal ikke lenger ligge som innsjekket fasit i denne filen
 
 - Den private kiitos-prefen kan presisere personlig arbeidsstil og lokale preferanser.
 - Den private kiitos-prefen kan også styre modulbruken for `guide/` med verdiene `på`, `ved behov` og `av`.
+- Når privat pref må nevne en delt regel, hold omtalen kort og pek eksplisitt til kanonisk eierfil i stedet for å gjengi reglenes fulltekst.
 - Den kan ikke oppheve delte kontraktregler, sikkerhetskrav eller tekniske sannheter.
 - Når en delt regel viser seg å være personsmak eller lokal arbeidsform, splittes den med `/maskin regelflyt senk`.
 - Når et personlig valg viser seg å være gjenbrukbart, løftes det med `/maskin regelflyt løft`.
