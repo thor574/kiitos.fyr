@@ -10,7 +10,8 @@ Kiitos er et universelt KI-instruksrammeverk for VS Code. Denne filen er den ope
 
 - Kiitos er et universelt lag som deles på tvers av alle laug.
 - Svar og dokumentasjon skal som hovedregel være på norsk (bokmål) når det passer.
-- Rotens `AGENTS.md` og `.github/copilot-instructions.md` er tynne innganger som peker hit.
+- Denne `velkommen.md` er kanonisk oppstartsflate for fyret. Verktøyspesifikke portaler som `AGENTS.md`, `.github/copilot-instructions.md` eller brukerprofiler i andre KI-verktøy skal peke hit, men kiitos skal ikke være bundet til ett filnavn.
+- Når en ny bruker mangler hele kiitos-flaten, hjelp først med å hente/legge til nødvendige lag: `kiitos.fyr`, relevant `kiitos.laug.*`, eventuell `kiitos.ruff.*`, og deretter prosjektmapper. Start så trinnvis installasjon via [guide/installasjon.md](guide/installasjon.md) og gjør brukeren kjent med `/maskin oppia`.
 - Hold deg til aktiv sak. Parker sidefunn i laugets `oppgaver/`.
 - Vær økonomisk i bruk av KI: velg minste nødvendige instruksflate og rimeligste modell som løser saken, og spar tunge modelløp til uklare, tverrgående eller datatunge oppgaver.
 - Norske ord beholdes med korrekt rettskrivning — ikke ASCII-normaliser `æ`, `ø` eller `å`.
@@ -34,7 +35,7 @@ Og to dimensjoner som ikke skal blandes:
 
 ## Deteksjonslogikk
 
-Når kiitos legges til som workspace-rot i et VS Code workspace, skal KI gjøre følgende:
+Når kiitos aktiveres via en oppstartsinstruks, portalfil eller workspace-rot, skal KI gjøre følgende:
 
 ### 1. Finn lauget
 

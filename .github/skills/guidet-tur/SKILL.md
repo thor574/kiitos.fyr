@@ -13,7 +13,7 @@ Denne maskinen gir nye brukere en steg-for-steg innføring i kiitos. Brukeren f�
 
 ## Forutsetninger
 
-- Kiitos-mappen finnes allerede som workspace-rot i VS Code.
+- `kiitos.fyr` og relevant laug finnes helst allerede som workspace-røtter i VS Code. Hvis ikke, hjelp først brukeren med grunnoppsettet i `kiitos.fyr/guide/installasjon.md`.
 - Brukeren har ikke nødvendigvis en personlig ruff ennå.
 
 ## Viktige regler
@@ -51,11 +51,11 @@ Opprett følgende struktur i den valgte mappen:
 ```
 <arbeidsromnavn>/
     velkommen.md              ← med <!-- kiitos-type: privat --> øverst
-    AGENTS.md                 ← tynt portal → velkommen.md
+    AGENTS.md                 ← tynn portal → velkommen.md
     LESMEG.md                 ← kort menneskevendt intro
     .gitignore                ← ignorer workspace-fil og lokal pref
     .github/
-        copilot-instructions.md   ← tynt portal → velkommen.md
+        copilot-instructions.md   ← Copilot-portal → velkommen.md
         copilot-kiitos-pref.md    ← fylles i steg 5–10
     guide/
         kiitos.md             ← prosjektkart (kort oversikt)
@@ -64,6 +64,8 @@ Opprett følgende struktur i den valgte mappen:
 ```
 
 Bruk malene fra `kiitos.fyr/maler/privat-arbeidsrom/` og `kiitos.fyr/maler/felles/` som utgangspunkt, men tilpass med brukerens valgte navn.
+
+`copilot-instructions.md` er bare Copilot-portalen. Hvis brukeren bruker et annet KI-verktøy, be dem opprette tilsvarende tynn portal eller bruker-/prosjektinstruks som peker til `velkommen.md`.
 
 Fortell brukeren hva som ble opprettet med en kort oversikt.
 
@@ -177,6 +179,8 @@ Gi en kort oppsummering av hva som ble satt opp:
 - Bekreft hvilke valg som ble gjort
 - Forklar kort hva de kan gjøre videre:
   - Legge til prosjektmapper i workspace
+  - Verifisere oppsettet mot `kiitos.fyr/guide/installasjon.md`
+  - Starte opplæring eller gjennomgang med `/maskin oppia`
   - Utforske moduler med `/maskin utforsk`
   - Justere pref-filen når som helst
   - Bruke `/maskin fortsett` for å gjenoppta arbeid etter pause

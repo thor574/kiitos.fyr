@@ -43,6 +43,24 @@ Installasjon har fire faser. De to første er påkrevd, de to siste er valgfrie.
 
 Framdriften spores i din lokale pref-fil (`.github/copilot-kiitos-pref.md`) under seksjonen **Installasjonsframdrift**. KI krysser av faser etterhvert som de fullføres.
 
+## Oppstartsinstruks for ny bruker
+
+Kiitos skal kunne startes fra den instruksflaten KI-verktøyet faktisk støtter. I GitHub Copilot kan det være `.github/copilot-instructions.md`; i andre verktøy kan det være `AGENTS.md`, en brukerprofil, en prosjektinstruks eller en annen oppstartsfil. Kiitos sin kanoniske inngang er likevel `velkommen.md` i hvert lag.
+
+Gi en ny bruker denne instruksen som første tekst i valgt KI-verktøy:
+
+```text
+Du skal hjelpe meg å installere og ta i bruk kiitos trinnvis.
+
+1. Finn eller be meg hente inn kiitos.fyr, relevant kiitos.laug.<navn> og eventuell kiitos.ruff.<bruker>.
+2. Be meg legge disse mappene til som workspace-røtter sammen med prosjektmappene jeg skal arbeide i.
+3. Les først kiitos.fyr/velkommen.md, deretter laugets velkommen.md og eventuell ruff/velkommen.md.
+4. Følg kiitos.fyr/guide/installasjon.md for grunnoppsett, etterkontroll, personalisering og prosjektpåmønstring.
+5. Når installasjonen er kontrollert, forklar hvordan jeg starter opplæring og gjennomgang med /maskin oppia.
+```
+
+De tynne portalfilene i hvert lag bør derfor bare gjøre én ting: peke til lagets `velkommen.md` og be KI følge instruksjonskjeden derfra. Hvis en bruker har et KI-verktøy uten fast oppstartsfil, lim inn instruksen over i verktøyets bruker- eller prosjektinstruks.
+
 ## Fase 1 — Grunnoppsett
 
 ### Steg 1–4: Workspace-oppsett
@@ -62,7 +80,7 @@ Framdriften spores i din lokale pref-fil (`.github/copilot-kiitos-pref.md`) unde
 ### Steg 5–6: Første KI-samtale
 
 5. Start en ny KI-samtale. KI skal:
-   - Lese `kiitos.fyr/velkommen.md` (via `.github/copilot-instructions.md`)
+   - Lese `kiitos.fyr/velkommen.md` (via valgt oppstartsinstruks eller portalfil)
    - Detektere lauget og dets type (delt/privat)
    - Tilby å opprette pref-fil hvis den mangler
    - Avslutte med kanarifugl-linje

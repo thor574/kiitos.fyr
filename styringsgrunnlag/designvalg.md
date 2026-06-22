@@ -1,6 +1,6 @@
 # Designvalg for kiitos (universelt)
 
-## Sist revidert: 2026-06-18
+## Sist revidert: 2026-06-22
 
 Gjeldende universelle standarder og føringer for utforming av kiitos-modellen.
 Designvalg er normgivende og kan revideres, i motsetning til ARV-er som er historiske.
@@ -11,7 +11,7 @@ Når et stabilt og normgivende valg avklares i samtalen eller arbeidet, og det g
 
 - `DV-KIITOS-01`: Operativ prosjektkunnskap skal ligge i prosjektets lokale `.kiitos/`, mens laugnivået skal bære delte regler, oversikter og pekere mellom lagene.
 - `DV-KIITOS-02`: Nytt førende innhold skal ligge i fyret → `guide/installasjon.md` for universelle guider, i laugets `guide/` for laugspesifikt innhold, ellers i lokal prosjekt-`.kiitos/`, avhengig av nivå og ansvar.
-- `DV-KIITOS-03`: Kiitos bruker fire operative lag: universelt lag i fyret, lauglag i `kiitos.laug.*`, personlig ruff i `kiitos.ruff.*`, og prosjektlag i `.kiitos/`. Rotens `AGENTS.md` og `.github/copilot-instructions.md` er inngangsfiler, ikke egne kunnskapslag.
+- `DV-KIITOS-03`: Kiitos bruker fire operative lag: universelt lag i fyret, lauglag i `kiitos.laug.*`, personlig ruff i `kiitos.ruff.*`, og prosjektlag i `.kiitos/`. Verktøyspesifikke portaler som `AGENTS.md`, `.github/copilot-instructions.md` og brukerprofiler i andre KI-verktøy er inngangsfiler, ikke egne kunnskapslag.
 - `DV-KIITOS-04`: `.github/copilot-kiitos-pref-mal.md` er innsjekket mal, mens `.github/copilot-kiitos-pref.md` er lokal og ignorert av Git. `copilot-pref.md` kan eksistere ved siden av som valgfri lokal Copilot-pref utenfor kiitos-modellen. Den private kiitos-fila skal bare bære personlige valg, ikke delte kontrakter eller tekniske sannheter.
 - `DV-KIITOS-05`: Den delbare kiitos-kjernen består av innsjekkede filer i rotens `.claude/`, `.github/` og øvrig innsjekket innhold i kiitos-repoet.
 - `DV-KIITOS-06`: Påmønstring for fysisk oppkobling av VS Code-workspace skal ligge i `kiitos.fyr/guide/installasjon.md`. Workspace-synlig `README.md` skal være en kort, menneskevendt toppflate som forklarer hva kiitos er og peker videre til `LESMEG.md`.
@@ -24,7 +24,7 @@ Når et stabilt og normgivende valg avklares i samtalen eller arbeidet, og det g
 - `DV-KIITOS-13`: `LESMEG.md` i laugroten skal være den synlige navigasjonshjelpen for brukere som vil starte fra begynnelsen igjen eller velge riktig inngang etter hensikt.
 - `DV-KIITOS-14`: `LESMEG.md` skal som minimum tilby tre tydelige veier videre: rask intro, grundig operativ forståelse og oppsett eller viderebygging.
 - `DV-KIITOS-15`: Når lauget mangler en kort introflate for rask forståelse, skal en slik opprettes i aktiv guideflate i stedet for å sende brukeren til historikk eller analyse som første korte rute.
-- `DV-KIITOS-16`: KI-ruting skal være separat og tynn. `.github/copilot-instructions.md` og `AGENTS.md` er KI-rutingsfiler og skal peke direkte til `velkommen.md`, slik at menneskevendt `README.md` og `LESMEG.md` kan bruke mykere og mer gradvis språk uten å sinke KI-rutingen.
+- `DV-KIITOS-16`: KI-ruting skal være separat og tynn. Portal- og rutingsfiler for konkrete KI-verktøy skal peke direkte til `velkommen.md`, slik at menneskevendt `README.md` og `LESMEG.md` kan bruke mykere og mer gradvis språk uten å sinke KI-rutingen.
 - `DV-KIITOS-17`: Operative eierfiler som både bærer delbar arbeidsmåte og lokal sannhet skal deles i identisk delt kjerne og lokal wrapper når kjernen er stabil, selvstendig lesbar og faktisk gjenbrukes på tvers av laug. Lokal wrapper skal da eie konkrete lokale steg, lokale maskiner, lokale modulregler og annen laugspesifikk sannhet.
 - `DV-KIITOS-18`: Operative instruksfiler skal være raskt oppslagsbare. En leser skal ved kort skumlesing kunne finne formål, nivå, kanonisk eier, eventuelle lokale tillegg eller avvik og tydelig neste peker uten å lese hele filkjeden først. Dette konkretiserer `DV-KIITOS-07`, `DV-KIITOS-08` og `DV-KIITOS-09` for aktiv bruk, og gjelder også når `DV-KIITOS-17` brukes med delt kjerne og lokal wrapper.
 - `DV-KIITOS-19`: I delte interne laugfiler brukes fornavn når navn er nødvendig for kontaktpunkter, ansvar eller faste rutiner. Fullt navn og andre personopplysninger skal unngås når de ikke trengs for arbeidsformen.
