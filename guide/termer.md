@@ -71,6 +71,7 @@ Kommando-ord: Skriv **innfør termer** når du vil at jeg skal implementere vedt
 - Guidelines → **retningslinjer**
 - image → **avbildning** i byggekontekst, **bilde** i fotokontekst
 - Issue / ticket → **sak**
+- GitHub Issues (produkt/systemnavn) → **GitHub Issues**; enkeltenheter omtales som **sak/saker** på norsk
 - keys → **nøkler**
 - Knowledge graph → **sammenhengskart**
 - label → **etikett**
