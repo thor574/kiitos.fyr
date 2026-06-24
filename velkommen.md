@@ -60,18 +60,22 @@ Bruk dette for å tilpasse oppførselen:
 
 Se om en workspace-rot med navn som starter med `kiitos.ruff.` finnes. Hvis ja, les dens `velkommen.md` for personlige preferanser.
 
-### 4. Sjekk installasjonsstatus
+### 4. Sjekk prosjektstart
+
+Hvis KI starter i en prosjektmappe, under `pro.*` eller direkte i en `.kiitos/`, skal KI lete opp nærmeste `.kiitos/prosjektinstruks.md`. Prosjektinstruksen leses etter at fyr, laug og eventuell ruff er funnet. Hvis verktøyet bare ser prosjektet, bruk prosjektets oppstartspeker til å finne nærliggende kiitos-røtter; hvis de ikke finnes eller ikke er synlige, si tydelig hva som mangler før du svarer på saken.
+
+### 5. Sjekk installasjonsstatus
 
 Hvis lauget mangler forventet mappestruktur (f.eks. `guide/`, `styringsgrunnlag/`, `journal/`, `oppgaver/`), tilby trinnvis hjelp for å sette det opp. Se [guide/installasjon.md](guide/installasjon.md).
 
-### 5. Pref-bootstrap
+### 6. Pref-bootstrap
 
 Hvis brukerens pref-fil mangler:
 - I delt laug med `kiitos.ruff.*`: Les malen fra `kiitos.fyr/.github/copilot-kiitos-pref-mal.md`, still spørsmålene som trengs, opprett pref-fil i `kiitos.ruff.*/.github/copilot-kiitos-pref.md`.
 - I delt laug uten `kiitos.ruff.*`: Opprett pref-fil lokalt i lauget som git-ignorert `.github/copilot-kiitos-pref.md`.
 - I privat laug: Opprett pref-fil i lauget.
 
-### 6. Initialiser sporing av periodiske skills
+### 7. Initialiser sporing av periodiske skills
 
 Sjekk om KI-minne (`/memories/refleksjonsskills-sporing.md`) finnes. Hvis ikke:
 
@@ -87,7 +91,7 @@ Sjekk om KI-minne (`/memories/refleksjonsskills-sporing.md`) finnes. Hvis ikke:
 
 Informer brukeren kort: «Sporing av periodiske skills er gjenopprettet fra journalen.»
 
-### 7. Varsle om nye eller endrede regler
+### 8. Varsle om nye eller endrede regler
 
 Hvis kiitos-roten eller laugets instruksfiler har endret seg siden forrige samtale (for eksempel etter `git pull`), varsle brukeren kort ved første nye samtale:
 

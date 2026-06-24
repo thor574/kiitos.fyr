@@ -62,7 +62,8 @@ Journaler er append-only under normalt arbeid. Riktig journal avgjøres av innho
 ## Lagregel
 
 - Høyere lag kan peke til lavere lag.
-- Lavere lag kan ikke peke tilbake til høyere lag.
+- Lavere lag kan ikke peke tilbake til høyere lag som faktaeier.
+- Unntak: korte oppstartspekere kan vise hvor KI finner `kiitos.fyr`, relevant `kiitos.laug.*` og eventuell `kiitos.ruff.*` når samtalen starter i en lavere mappe. Slike pekere dupliserer ikke regler og overtar ikke eierskap.
 - Prosjektnivå kan henvise til andre prosjekter i samme arbeidsrom.
 - Ved navnekollisjon mellom lag: lavere lag har forrang (lokal vinner over universell).
 
