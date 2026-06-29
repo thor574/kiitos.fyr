@@ -45,6 +45,15 @@ Denne fila er den kanoniske styringsflaten for kiitos-visjoner. Den eies av kiit
 - Målet med konsistens er ikke kosmetisk likhet, men lavere kognitiv belastning for dem som bruker og vedlikeholder instruksene.
 - Når samme forhold går igjen flere steder, skal kiitos hjelpe med å skille mellom reelle forskjeller og historiske variasjoner som kan jevnes ut.
 
+### VIS-KIITOS-06: Kiitos skal fremme KI som sparringspartner og refleksjonsverktøy
+
+**Kilde:** Statsråd Sigrun Aasland, forsknings- og høyere utdanningsminister. "Tre hjemmelekser fra statsråden". Khrono, 29. juni 2026. https://www.khrono.no/tre-hjemmelekser-fra-statsraden/1069470
+
+- KI skal brukes til sparring og refleksjon, ikke bare til automatisering og effektivisering.
+- Målet for KI-bruk skal være eksplisitte og målbare: Hvordan kan KI bidra til god læring og kunnskapsutvikling?
+- Kiitos skal gjøre det lett å dokumentere og dele hvordan KI brukes som refleksjonsmiddel i kompetanseutviklingsarbeid.
+- Både personer og laug skal kunne begrunne sin KI-bruk som del av strategisk kompetanseplanlegging, ikke bare som verktøy for ekstern leveranse.
+
 ## Utgått
 
 *(ingen utgåtte oppføringer)*
