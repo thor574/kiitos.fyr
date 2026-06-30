@@ -28,6 +28,8 @@ Relevante prinsipper herfra:
 - **Invokasjonsmodi**: skills uten KI-ruting bør ha human-vendt description (ikke trigger-phrasing) — null ekstra kontekstlast.
 - **Router-skill**: når mange manuelle skills hoper seg opp, dekker én router-skill kognitiv last bedre enn mange separate descriptions.
 
+Kanskje det finnes mer.  Vi håper å avklare det med en ekstra grundig fler-faset gjennomgang.
+
 ### Forslag til arbeid
 
 1. **Kjør no-op-testen** gjennom alle SKILL.md-filer i `kiitos.fyr/.github/skills/`. Les hver setning isolert: «ville KI gjort dette uten instruksen?» Slett setninger som feiler.
