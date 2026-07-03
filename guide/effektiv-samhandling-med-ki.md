@@ -203,3 +203,42 @@ Når du parkerer eller analyserer agentbehov, noter kort:
 - om behovet er lokalt, arbeidsromfelles eller tverrprosjektlig
 
 Dette er nok til å gjøre senere agentvurderinger mer systematiske uten å innføre tung måling.
+
+## 9. Avslutt store sesjoner med kunnskapsretur
+
+Etter en stor, dyr sesjon med mange leste filer og bred kontekst — typisk 6+ timers arbeid,
+300k+ tokens, 2000+ credits — er kontekstvinduet varmere enn det noen gang vil bli igjen
+for den saken. Bruk dette til å betale tilbake til dokumentasjonen **før samtalen avsluttes**.
+
+### Tegn på at retur er aktuelt
+
+- Du har løst komplekse problemer som krevde å lese mange filer på tvers av lag
+- Du har oppdaget fallgruver, mønstre eller beslutninger som ikke var dokumentert
+- Nye begreper eller regler har blitt avklart underveis
+- Neste KI-sesjon ville brukt mye tid på å rekonstruere det samme
+
+### Hva som returneres og til hvilket lag
+
+| Hva | Til |
+|---|---|
+| Prosjektspesifikke guider (arkitektur, datamodell, prosess) | Prosjektets `.kiitos/guide/` |
+| Nye begreper eller ord | Prosjektets `.kiitos/styringsgrunnlag/domenevokabular.md` |
+| Nye arkitektur- eller designbeslutninger | Prosjektets `.kiitos/styringsgrunnlag/arkitekturvalg.md` |
+| Universelle KI-praksiser (dette) | `kiitos.fyr/guide/` |
+| Tverrgående laugserfaringer | `kiitos.laug.*/guide/` eller `journal/` |
+| Sesjonskostnad og lærdom | Prosjektets `.kiitos/journal/` |
+
+### Rekkefølge
+
+1. **Journalfør** sesjonen med kostnadsbilde (arbeidstid, credits, tokens, commits)
+2. **Oppdater eller opprett guider** mens konteksten er varm
+3. **Oppdater styringsgrunnlag** for nye begreper og beslutninger
+4. **Oppdater prosjektinstruks** med referanser til nye guider
+5. **Commit i logiske grupper** — ikke alt i én commit
+
+### KI-instruksjon
+
+Når sesjonen avsluttes og konteksten er stor, **foreslå alltid** en kunnskapsretur
+etter mønsteret ovenfor. Spør brukeren: «Vi er ferdige med det operative. Vil du at
+vi bruker gjenværende kontekst til å kristallisere funnene tilbake i guider og
+styringsgrunnlag?» Vent på bekreftelse, og gjennomfør deretter i grupper.
