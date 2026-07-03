@@ -204,6 +204,31 @@ Når du parkerer eller analyserer agentbehov, noter kort:
 
 Dette er nok til å gjøre senere agentvurderinger mer systematiske uten å innføre tung måling.
 
+## 8b. Spesifiser diagnosekontekst ved feilsøking
+
+Når du melder en feil eller et uventet varsel, oppgi alltid **én setning** om
+hvor symptomet er observert. Dette alene kan spare et helt analyseløp.
+
+### Minimalmal for feilmelding
+
+```text
+Symptom: [hva du ser]
+Sted:    [server-logg | nettleserkonsoll | begge | annet]
+URL:     [evt. konkret URL eller endepunkt]
+```
+
+### Eksempler
+
+- «Får røde varsler i nettleserkonsollen på `/fagfeltoversikt/fagfelt?id=1172`»
+- «`NullPointerException` i server-loggen ved kall mot `/fagfelt/issn-startside`»
+- «HTTP 400 i Network-fanen for `/fagfelt/1180/arkiv`»
+
+**Uten «Sted»** vil KI typisk lese gjennom Java-kode, SQL-queries og
+Spring-konfigurasjon — selv om feilen sitter i klient-side JavaScript.
+Dette er den vanligste kilden til unødvendig bred kontekstbruk ved NPI-feilsøking.
+
+---
+
 ## 9. Avslutt store sesjoner med kunnskapsretur
 
 Etter en stor, dyr sesjon med mange leste filer og bred kontekst — typisk 6+ timers arbeid,
