@@ -43,6 +43,7 @@ Velg journalnivå ut fra den operative journalguiden:
 
 Maskinen skal særlig håndheve:
 
+- Før journalføring: sjekk om `/memories/session/instrukslogg.md` finnes. Hvis den gjør det, bruk den som primærkilde for ordrett brukerinstruks i blockquote-feltet. Hvis den ikke finnes, bruk konteksthistorikken som før.
 - Nummererte overskrifter på formen `# KI-instruks N`
 - Ordrett brukerinstruks i blockquote (`>`)
 - Ingen parafrasering av brukerinstruks i blockquote (tekst skal stå som skrevet)

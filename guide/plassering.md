@@ -41,6 +41,12 @@ Ved tvil: velg laveste riktige lag. Løft oppover bare når innholdet er stabilt
 
 ## Personvern og arbeidsrelasjoner
 
+Navn, persondetaljer og beskrivelser av arbeidsrelasjoner er alltid private. Regelen gjelder også under intervjuer, gjennomganger og refleksjonssambaler:
+
+- **Sensitive observasjoner** om enkeltpersoner (atferd, relasjoner, personlige vurderinger) → ruff eller lokal git-ignorert fil. Skal aldri skrives til fyr (offentlig) eller laug (delt).
+- **Positive observasjoner om laget som helhet** (rollefunksjoner, rutiner, prosesser) → laug, forutsatt at de ikke identifiserer enkeltpersoner negativt.
+- Navn brukes kun som formelle rolleidentifikatorer i delte laugfiler (f.eks. kontaktpunkter i `guide/ansvar.md`), aldri som vurderingsobjekter.
+
 Navn, persondetaljer og beskrivelser av arbeidsrelasjoner er alltid private:
 
 - **Lagres kun i privat område** (`kiitos.ruff.<bruker>` eller lokale, git-ignorerte filer).
