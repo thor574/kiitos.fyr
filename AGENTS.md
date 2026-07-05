@@ -4,7 +4,8 @@ Denne fila finnes fordi noen agenter leter etter `AGENTS.md` i rota som første 
 
 Kiitos er et universelt KI-instruksrammeverk. For operative instrukser:
 1. Les `./velkommen.md`.
-2. Følg instruksjonskjeden derfra.
+2. Hvis `./velkommen.md` ikke finnes eller ikke kan leses, skal agenten stoppe og informere brukeren om at filen mangler, i stedet for å fortsette med ufullstendig kontekst.
+3. Følg instruksjonskjeden derfra.
 
 ## Agentmaler
 
@@ -31,7 +32,7 @@ Agentene kan kjedes etter behov. Vanlige mønstre:
 | Ukjent instruksflate ved oppstart | agent002 → agent001 |
 | Ferdig endring, klar for review | agent004 |
 
-Kjedene er veiledende, ikke obligatoriske. Hopp over ledd som ikke tilfører verdi for den konkrete saken.
+Kjedene er veiledende, ikke obligatoriske. Hopp over et ledd hvis: (a) agentens ansvarsområde ikke overlapper med den aktuelle saken, eller (b) nødvendig kontekst allerede er etablert av et tidligere ledd.
 
 ### Plassholdere i malene
 
@@ -40,3 +41,5 @@ Kjedene er veiledende, ikke obligatoriske. Hopp over ledd som ikke tilfører ver
 | `{{PROSJEKTOVERSIKT}}` | Laugets røtter og prosjektbeskrivelser | agent001 |
 | `{{SØSTERRELASJONER}}` | Konkrete prosjektpar og avhengigheter | agent005 |
 | `{{EKSEMPLER}}` | Laugspesifikke eksempler på forespørsler | alle |
+
+Hvis en plassholder ikke er fylt ut ved installasjon, skal agenten stoppe og rapportere hvilken plassholder som mangler, uten å forsøke å gjette innholdet.
