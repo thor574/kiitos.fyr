@@ -35,10 +35,13 @@ Alternativt kan du lage ditt eget private laug ved å opprette en mappe med navn
 
 ## Rask installasjon
 
-1. **Klon dette repoet** til en lokal mappe
-2. **Åpne laugets** `.code-workspace`-fil (eller lag et nytt laug)
-3. **Legg til kiitos-mappen** via *File → Add Folder to Workspace*
-4. **Start en Copilot-samtale** — kiitos detekterer situasjonen og guider deg videre
+1. **Klon kiitos.fyr (dette repoet)** til en lokal mappe
+2. **Klon kiitos.laug.<x>** til en lokal mappe (eller lag et nytt laug)
+3. **Åpne laugets** `.code-workspace`-fil i Visual Studio Code (VSC)
+4. **Legg til kiitos.fyr-mappen** via *File → Add Folder to Workspace*
+5. **Start en Copilot-samtale** — kiitos detekterer situasjonen og guider deg videre
+
+Status: Denne prosessen trenger validering og muligens polering.
 
 Se [guide/installasjon.md](guide/installasjon.md) for detaljert veiledning og tre kompetansenivåer.
 
