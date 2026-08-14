@@ -76,7 +76,7 @@ Denne guiden definerer arbeidsflyten for evalueringer i kiitos.fyr, basert på B
 | 4.4 | Finaliser rapport | `evaluering-rapport.md` | Godkjent av evalueringsleder |
 
 **Dokumentasjonskrav**:
-- Rapport følger malen i [maler/evalueringsrapport-mal.md](../../maler/felles/evalueringsrapport-mal.md)
+- Rapport følger malen i [maler/felles/evalueringsrapport-mal.md](../maler/felles/evalueringsrapport-mal.md)
 - Alle funn er nummerert og referert
 - Anbefalinger er prioriterte
 
@@ -167,6 +167,6 @@ Denne guiden definerer arbeidsflyten for evalueringer i kiitos.fyr, basert på B
 - [evalueringsrammeverk.md](evalueringsrammeverk.md)
 - [journal-system.md](journal-system.md)
 - [instruksintegritet.md](instruksintegritet.md)
-- [maler/evalueringsrapport-mal.md](../../maler/felles/evalueringsrapport-mal.md)
-- [maler/evaluering-formaal-mal.md](../../maler/felles/evaluering-formaal-mal.md)
-- [maler/evalueringsflyt-mal.md](../../maler/felles/evalueringsflyt-mal.md)
+- [maler/felles/evalueringsrapport-mal.md](../maler/felles/evalueringsrapport-mal.md)
+- [maler/felles/evaluering-formaal-mal.md](../maler/felles/evaluering-formaal-mal.md)
+- [maler/felles/evalueringsflyt-mal.md](../maler/felles/evalueringsflyt-mal.md)

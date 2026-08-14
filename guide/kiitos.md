@@ -27,11 +27,13 @@ Begreper og navnekonvensjoner eies av `styringsgrunnlag/begrepsmatrise.md` i kii
 ## Leserekkefølge
 
 1. `kiitos.fyr/velkommen.md` (universell inngang, deteksjonslogikk)
-2. Laugets `velkommen.md` (laugspesifikk orientering)
-3. `kiitos.ruff.*`s `velkommen.md` (personlige preferanser, hvis den finnes)
+2. `kiitos.ruff.*`s `velkommen.md` og pref-fil (personlige preferanser, hvis de finnes)
+3. Laugets `velkommen.md` (laugspesifikk orientering)
 4. Denne filen og relevante guider i `kiitos.fyr/guide/` etter modulvalg
 5. Laugets `guide/kiitos.md` for prosjektkart
 6. Prosjektets `.kiitos/prosjektinstruks.md` når den finnes
+
+Når ruff og laug uttrykker ulike preferanser for arbeidsstil, har ruff forrang. Ruff kan ikke overstyre sikkerhetskrav, kildefakta, tekniske kontrakter eller uttrykkelige prosjektgrenser.
 
 ## Privat innstillingslag
 
@@ -80,5 +82,5 @@ Plasseringslogikk, personvernregler, journal-plassering og lagregel eies av [pla
 - Oppgaveparkering: [oppgave-parkering.md](oppgave-parkering.md)
 - Journalsystem: [journal-system.md](journal-system.md)
 - Preferanser: [preferanser.md](preferanser.md)
-- Evalueringsrammeverk: [evalueringsrammeverk.md](guide/evalueringsrammeverk.md)
+- Evalueringsrammeverk: [evalueringsrammeverk.md](evalueringsrammeverk.md)
 - Fysisk påmønstring: [installasjon.md](installasjon.md)

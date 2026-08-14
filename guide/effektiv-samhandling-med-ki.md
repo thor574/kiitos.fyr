@@ -2,7 +2,7 @@
 
 Formål: få raskere og mer presise leveranser med minst mulig frem og tilbake.
 
-På tvers av søster-workspace brukes samme grunnmønster: start i `velkommen.md` direkte eller via rotens `AGENTS.md` eller `.github/copilot-instructions.md`, og les deretter de relevante lagene i `guide/`, ellers i arbeidsromsroten og i prosjektets lokale `.kiitos/` for saken.
+På tvers av søster-workspace brukes samme grunnmønster: start via laugets arbeidsromsspesifikke Copilot-kompilat, eller i `velkommen.md` direkte eller via `AGENTS.md`. Les deretter relevante lag i `guide/`, laugets arbeidsromsrot og prosjektets lokale `.kiitos/` for saken.
 
 ## 1. Start saker med riktig ramme
 

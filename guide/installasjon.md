@@ -1,6 +1,6 @@
 ﻿# Installasjon
 
-Denne fila eier de konkrete oppsettsstegene for kiitos gen5.
+Denne fila eier de konkrete oppsettsstegene for kiitos gen6.
 
 ## Hva kiitos er
 
@@ -45,7 +45,7 @@ Framdriften spores i din lokale pref-fil (`.github/copilot-kiitos-pref.md`) unde
 
 ## Oppstartsinstruks for ny bruker
 
-Kiitos skal kunne startes fra den instruksflaten KI-verktøyet faktisk støtter. I GitHub Copilot kan det være `.github/copilot-instructions.md`; i andre verktøy kan det være `AGENTS.md`, en brukerprofil, en prosjektinstruks eller en annen oppstartsfil. Kiitos sin kanoniske inngang er likevel `velkommen.md` i hvert lag.
+Kiitos skal kunne startes fra den instruksflaten KI-verktøyet faktisk støtter. I GitHub Copilot brukes ett generert, arbeidsromsspesifikt `.github/copilot-instructions.md` i laugets rot; i andre verktøy kan det være `AGENTS.md`, en brukerprofil, en prosjektinstruks eller en annen oppstartsfil. Kiitos sin kanoniske inngang er likevel `velkommen.md` i hvert lag.
 
 Gi en ny bruker denne instruksen som første tekst i valgt KI-verktøy:
 
@@ -54,12 +54,12 @@ Du skal hjelpe meg å installere og ta i bruk kiitos trinnvis.
 
 1. Finn eller be meg hente inn kiitos.fyr, relevant kiitos.laug.<navn> og eventuell kiitos.ruff.<bruker>.
 2. Be meg legge disse mappene til som workspace-røtter sammen med prosjektmappene jeg skal arbeide i.
-3. Les først kiitos.fyr/velkommen.md, deretter laugets velkommen.md og eventuell ruff/velkommen.md.
+3. Les først kiitos.fyr/velkommen.md, deretter eventuell ruff/velkommen.md og pref-fil, og så laugets velkommen.md.
 4. Følg kiitos.fyr/guide/installasjon.md for grunnoppsett, etterkontroll, personalisering og prosjektpåmønstring.
 5. Når installasjonen er kontrollert, forklar hvordan jeg starter opplæring og gjennomgang med /maskin oppia.
 ```
 
-De tynne portalfilene i hvert lag bør derfor bare gjøre én ting: peke til lagets `velkommen.md` og be KI følge instruksjonskjeden derfra. Hvis en bruker har et KI-verktøy uten fast oppstartsfil, lim inn instruksen over i verktøyets bruker- eller prosjektinstruks.
+`AGENTS.md` kan være en tynn, versjonert portal i hver selvstendig rot. For Copilot skal lauget i stedet eie `kiitos-kompilat.json`; fyrets `scripts/kompiler-kiitos.ps1` finner røttene i brukerens lokale `.code-workspace` og samler valgt fyr, personlig `kiitos.ruff.*` og aktivt laug til én lokal, git-ignorert `.github/copilot-instructions.md`. Ruff identifiseres med workspace-navnet `kiitos.ruff.*`, ikke med én hardkodet bruker. Hvis en bruker har et KI-verktøy uten fast oppstartsfil, lim inn instruksen over i verktøyets bruker- eller prosjektinstruks.
 
 ## Fase 1 — Grunnoppsett
 
@@ -77,19 +77,48 @@ De tynne portalfilene i hvert lag bør derfor bare gjøre én ting: peke til lag
    3. `kiitos.ruff.<bruker>` ← personlig ruff (valgfritt)
    4. Prosjektmapper
 
-### Steg 5–6: Første KI-samtale
+Katalogen som inneholder laugets `.code-workspace` er arbeidsrommets logiske eierrot. Hver oppføring under `folders` er samtidig en egen teknisk VS Code-rot; de blir ikke filsystemmessige undermapper av lauget.
 
-5. Start en ny KI-samtale. KI skal:
+5. Kontroller og generer Copilot-kompilatet fra laugets rot:
+
+   ```powershell
+   & ..\kiitos.fyr\scripts\kompiler-kiitos.ps1 -ManifestPath .\kiitos-kompilat.json -Check
+   & ..\kiitos.fyr\scripts\kompiler-kiitos.ps1 -ManifestPath .\kiitos-kompilat.json
+   ```
+
+   Eksemplet forutsetter at fyret og lauget ligger side ved side. Bruk full sti til `kompiler-kiitos.ps1` når de ligger andre steder. `-Check` endrer ingenting og returnerer feilstatus når kompilatet mangler eller er utdatert; kjør kommandoen uten `-Check` for å generere det.
+
+   Kjør kontrollen:
+
+   - etter endringer eller oppdateringer i en fil som er listet i `kiitos-kompilat.json`;
+   - etter endringer i manifestet eller den lokale `.code-workspace`-filens Kiitos-røtter og navn;
+   - ved førstegangsoppsett, etter ny utsjekk eller hvis den genererte fila mangler;
+   - før en ny arbeidsøkt når fyr, ruff eller laug nylig er oppdatert.
+
+   En vanlig endring i prosjektets `.kiitos/prosjektinstruks.md` krever ikke kompilering, fordi prosjektinstruksen leses direkte ved behov. KI skal foreslå ny kompilering når kontrollen viser at kompilatet er utdatert, men skal ikke generere på nytt utenfor aktivt arbeidsomfang.
+
+   Når lauget har `kiitos.bat`, kan de samme operasjonene kjøres kort fra laugets rot:
+
+   ```powershell
+   .\kiitos.bat
+   .\kiitos.bat bygg
+   ```
+
+   Batchfila skal bruke relative stier: den finner manifestet ved siden av seg selv og finner `kiitos.fyr` gjennom laugets lokale `.code-workspace`-fil. Den skal ikke hardkode én brukers mappe.
+
+### Steg 6–7: Første KI-samtale
+
+6. Start en ny KI-samtale. KI skal:
    - Lese `kiitos.fyr/velkommen.md` (via valgt oppstartsinstruks eller portalfil)
    - Detektere lauget og dets type (delt/privat)
    - Tilby å opprette pref-fil hvis den mangler
    - Avslutte med kanarifugl-linje
 
-6. Verifiser at KI svarer med kanarifugl-linjen og at den har lest riktig laug.
+7. Verifiser at KI svarer med kanarifugl-linjen og at den har lest riktig laug.
 
-### Steg 7: GitHub-tilkobling (MCP)
+### Steg 8: GitHub-tilkobling (MCP)
 
-7. Sett opp GitHub-tilkobling via MCP slik at KI kan lese og opprette issues direkte. Se [GitHub Issues via MCP](#github-issues-via-mcp) lenger ned.
+8. Sett opp GitHub-tilkobling via MCP slik at KI kan lese og opprette issues direkte. Se [GitHub Issues via MCP](#github-issues-via-mcp) lenger ned.
 
 > **Sjekkpunkt — Fase 1 ferdig?** Du er klar hvis: ✅ KI svarer med kanarifugl-linje, ✅ KI leser riktig laug, ✅ `github`-serveren vises i MCP-listen. Be KI krysse av Fase 1 i pref-filen din.
 
@@ -142,8 +171,8 @@ De tynne portalfilene i hvert lag bør derfor bare gjøre én ting: peke til lag
 2. Opprett disse filene og mappene:
    - `velkommen.md` med `<!-- kiitos-type: delt -->` på første linje
    - `AGENTS.md` (tynt portal → velkommen.md)
-   - `.github/copilot-instructions.md` (tynt portal → velkommen.md)
-   - `.gitignore` (workspace-fil + lokal pref)
+   - `kiitos-kompilat.json` (versjonert kildemanifest)
+   - `.gitignore` (workspace-fil, lokal pref og generert `.github/copilot-instructions.md`)
    - `guide/kiitos.md` (prosjektkart og laugspesifikk orientering)
    - `LESMEG.md` (menneskevendt navigasjonshjelp)
 
@@ -167,7 +196,7 @@ De tynne portalfilene i hvert lag bør derfor bare gjøre én ting: peke til lag
 
 2. Opprett `velkommen.md` med `<!-- kiitos-type: privat -->` på første linje.
 
-3. Opprett portaler (`AGENTS.md`, `.github/copilot-instructions.md`) og øvrige mapper som over.
+3. Opprett `AGENTS.md`, `kiitos-kompilat.json`, `.gitignore` og øvrige mapper som over. Generer Copilot-fila lokalt; ikke versjoner den.
 
 4. Generer laugspesifikke agenter fra malene (se steg 4 under «Delt laug» for detaljer).
 

@@ -199,5 +199,5 @@ Kandidat-scope:
 
 ## Relaterte guider
 
-- [sfo-simulering.md](sfo-simulering.md) - bruker datamodell-kunnskap om npi.nokkeltall
+- Prosjektguiden `npi/.kiitos/guide/sfo-simulering.md` bruker datamodellkunnskap om `npi.nokkeltall`.
 - (ingen andre ennå - dette er første gang vi formaliserer prinsippet)

@@ -4,13 +4,15 @@ Kiitos er et universelt KI-instruksrammeverk. Det gir struktur, konvensjoner og 
 
 Start i [LESMEG.md](LESMEG.md) hvis du vil ha en menneskevendt inngang. Den peker blant annet til en kort [virksomhetsintro](guide/virksomhetsintro/README.md) for alle, uansett bakgrunn.
 
+Aktiv generasjon er **kiitos gen6**, lansert 14. august 2026. Se [HISTORIKK.md](HISTORIKK.md) for en kort oversikt over de viktigste generasjonsskiftene.
+
 ## Hva kiitos gjør
 
 - **Konsistente KI-instrukser** på tvers av prosjekter og laug
 - **Lagdelt modell** som skiller universelt, laugdelt, personlig og prosjektspesifikt
 - **Progressiv onboarding** — nyttig fra dag 1, uendelig tilpasningsbart
 - **Hybrid skills** — base-maskiner som kan overstyres per laug
-- **Støtte for Copilot, Claude Code og Codex** via standard inngangsfiler
+- **Støtte for ChatGPT/Codex, Copilot og andre KI-verktøy** via verktøytilpassede innganger til samme kanoniske kunnskap
 
 ## Lagmodell
 
@@ -55,7 +57,7 @@ kiitos/
   journal/                  ← universell journal
   .github/skills/           ← base-skills (maskiner)
   .claude/agents/           ← universelle Claude-agenter
-  .github/copilot-instructions.md  ← inngang for Copilot
+  scripts/kompiler-kiitos.ps1     ← bygger laugets lokale Copilot-inngang
   AGENTS.md                 ← inngang for Claude Code
 ```
 

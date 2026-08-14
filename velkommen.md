@@ -10,7 +10,7 @@ Kiitos er et universelt KI-instruksrammeverk for VS Code. Denne filen er den ope
 
 - Kiitos er et universelt lag som deles på tvers av alle laug.
 - Svar og dokumentasjon skal som hovedregel være på norsk (bokmål) når det passer.
-- Denne `velkommen.md` er kanonisk oppstartsflate for fyret. Verktøyspesifikke portaler som `AGENTS.md`, `.github/copilot-instructions.md` eller brukerprofiler i andre KI-verktøy skal peke hit, men kiitos skal ikke være bundet til ett filnavn.
+- Denne `velkommen.md` er kanonisk oppstartsflate for fyret. Verktøyspesifikke portaler som `AGENTS.md`, et arbeidsromsspesifikt Copilot-kompilat eller brukerprofiler i andre KI-verktøy skal hente eller peke hit, men kiitos skal ikke være bundet til ett filnavn.
 - Når en ny bruker mangler hele kiitos-flaten, hjelp først med å hente/legge til nødvendige lag: `kiitos.fyr`, relevant `kiitos.laug.*`, eventuell `kiitos.ruff.*`, og deretter prosjektmapper. Start så trinnvis installasjon via [guide/installasjon.md](guide/installasjon.md) og gjør brukeren kjent med `/maskin oppia`.
 - Hold deg til aktiv sak. Parker sidefunn i laugets `oppgaver/`.
 - Vær økonomisk i bruk av KI: velg minste nødvendige instruksflate og rimeligste modell som løser saken, og spar tunge modelløp til uklare, tverrgående eller datatunge oppgaver.
@@ -59,7 +59,7 @@ Bruk dette for å tilpasse oppførselen:
 
 ### 3. Sjekk ruff
 
-Se om en workspace-rot med navn som starter med `kiitos.ruff.` finnes. Hvis ja, les dens `velkommen.md` for personlige preferanser.
+Se om en workspace-rot med navn som starter med `kiitos.ruff.` finnes. Hvis ja, les dens `velkommen.md` og pref-fil før laugets preferanser anvendes. Ruff har forrang når ruff og laug uttrykker ulike preferanser for arbeidsstil. Sikkerhetskrav, kildefakta, tekniske kontrakter og prosjektgrenser er ikke preferanser.
 
 ### 4. Sjekk prosjektstart
 
@@ -103,8 +103,8 @@ Deteksjon: Sjekk om `guide/`, `styringsgrunnlag/` eller `.github/skills/` i kiit
 ## Leserekkefølge
 
 1. Denne filen (universell inngang, deteksjonslogikk)
-2. Laugets `velkommen.md` (laugspesifikk orientering)
-3. `kiitos.ruff.*`s `velkommen.md` (personlige preferanser, hvis den finnes)
+2. `kiitos.ruff.*`s `velkommen.md` og pref-fil (personlige preferanser, hvis de finnes)
+3. Laugets `velkommen.md` (laugspesifikk orientering)
 4. `guide/kiitos.md` for universell orientering
 5. Laugets `guide/kiitos.md` for prosjektkart
 6. Prosjektets `.kiitos/prosjektinstruks.md` når den finnes

@@ -1,6 +1,6 @@
 # Designvalg for kiitos (universelt)
 
-## Sist revidert: 2026-06-22
+## Sist revidert: 2026-08-13
 
 Gjeldende universelle standarder og føringer for utforming av kiitos-modellen.
 Designvalg er normgivende og kan revideres, i motsetning til ARV-er som er historiske.
@@ -11,7 +11,7 @@ Når et stabilt og normgivende valg avklares i samtalen eller arbeidet, og det g
 
 - `DV-KIITOS-01`: Operativ prosjektkunnskap skal ligge i prosjektets lokale `.kiitos/`, mens laugnivået skal bære delte regler, oversikter og pekere mellom lagene.
 - `DV-KIITOS-02`: Nytt førende innhold skal ligge i fyret → `guide/installasjon.md` for universelle guider, i laugets `guide/` for laugspesifikt innhold, ellers i lokal prosjekt-`.kiitos/`, avhengig av nivå og ansvar.
-- `DV-KIITOS-03`: Kiitos bruker fire operative lag: universelt lag i fyret, lauglag i `kiitos.laug.*`, personlig ruff i `kiitos.ruff.*`, og prosjektlag i `.kiitos/`. Verktøyspesifikke portaler som `AGENTS.md`, `.github/copilot-instructions.md` og brukerprofiler i andre KI-verktøy er inngangsfiler, ikke egne kunnskapslag.
+- `DV-KIITOS-03`: Kiitos bruker fire operative lag: universelt lag i fyret, lauglag i `kiitos.laug.*`, personlig ruff i `kiitos.ruff.*`, og prosjektlag i `.kiitos/`. Verktøyspesifikke portaler som `AGENTS.md`, det genererte Copilot-kompilatet og brukerprofiler i andre KI-verktøy er inngangsflater, ikke egne kunnskapslag.
 - `DV-KIITOS-04`: `.github/copilot-kiitos-pref-mal.md` er innsjekket mal, mens `.github/copilot-kiitos-pref.md` er lokal og ignorert av Git. `copilot-pref.md` kan eksistere ved siden av som valgfri lokal Copilot-pref utenfor kiitos-modellen. Den private kiitos-fila skal bare bære personlige valg, ikke delte kontrakter eller tekniske sannheter.
 - `DV-KIITOS-05`: Den delbare kiitos-kjernen består av innsjekkede filer i rotens `.claude/`, `.github/` og øvrig innsjekket innhold i kiitos-repoet.
 - `DV-KIITOS-06`: Påmønstring for fysisk oppkobling av VS Code-workspace skal ligge i `kiitos.fyr/guide/installasjon.md`. Workspace-synlig `README.md` skal være en kort, menneskevendt toppflate som forklarer hva kiitos er og peker videre til `LESMEG.md`.
@@ -19,7 +19,7 @@ Når et stabilt og normgivende valg avklares i samtalen eller arbeidet, og det g
 - `DV-KIITOS-08`: Hver stabil faktatype i kiitos skal ha én kanonisk eierfil. Andre filer skal som hovedregel bare peke til eierfila, ikke gjengi samme steg, begrunnelser, unntak eller standardverdier på nytt. Plasseringslogikk, personvern og lagregel eies av `guide/plassering.md`.
 - `DV-KIITOS-09`: Tillatt bevisst gjentakelse i ikke-eierfiler er begrenset til kort lokal kontekst, lokale forutsetninger og en kort peker videre. Fysisk påmønstring eies av `kiitos.fyr/guide/installasjon.md`, restartbar navigasjon eies av `LESMEG.md`, mens bootstraprekkefølgen eies av `velkommen.md` i laugroten.
 - `DV-KIITOS-10`: Individuell gjennomgang av kiitos, inkludert godkjenninger, anmerkninger og oppia-innspill, skal lagres i lokal, gitignorert flate som `kompetanse.min/`, mens delte filer som `guide/ansvar.md` bare skal bære stabile roller, kontaktpunkter og annen felles sannhet.
-- `DV-KIITOS-11`: Inntil kiitos er polert gjennom bruk og eventuelt låses som historisk strukturvalg, skal migrerte prosjekter ikke bruke prosjektlokal `.github/copilot-instructions.md` som eget inngangslag. Rotens `.github/copilot-instructions.md` skal dispatch-e direkte til prosjektets lokale `.kiitos/prosjektinstruks.md`.
+- `DV-KIITOS-11`: Migrerte prosjekter skal ikke bruke prosjektlokal `.github/copilot-instructions.md` som eget inngangslag. Laugets arbeidsromsspesifikke Copilot-kompilat skal sende prosjektnært arbeid videre til nærmeste `.kiitos/prosjektinstruks.md`.
 - `DV-KIITOS-12`: Detaljert oppia-progresjon skal fortsatt være lokal, men når en oppia-løype er fullført, ferdig ny-skannet og uten nye læringspunkter, kan en kort delt fullføringsføring registreres i laugets `guide/kompetanse.md`.
 - `DV-KIITOS-13`: `LESMEG.md` i laugroten skal være den synlige navigasjonshjelpen for brukere som vil starte fra begynnelsen igjen eller velge riktig inngang etter hensikt.
 - `DV-KIITOS-14`: `LESMEG.md` skal som minimum tilby tre tydelige veier videre: rask intro, grundig operativ forståelse og oppsett eller viderebygging.
@@ -33,6 +33,12 @@ Når et stabilt og normgivende valg avklares i samtalen eller arbeidet, og det g
 - `DV-KIITOS-22`: Tyngre agentflyt skal utløses av kompleksitet, uklarhet, kontraktrisiko eller tverrprosjektlig konsekvens, ikke av vane. Enkle og lokale saker kan behandles direkte, mens saker med høyere risiko skal rutes gjennom passende speider-, triagerings-, harmoniserings- eller review-maskin med kort begrunnelse for valget.
 - `DV-KIITOS-23`: Evalueringer skal følge Bastøes fem forutsetninger definert i `guide/evalueringsrammeverk.md`. Alle evalueringsaktiviteter skal ha tydelig formål, systematisk prosess og kvalitetssikring.
 - `DV-KIITOS-24`: Privat kiitos-pref kan referere delte regler kun som kort lokal kontekst med tydelig peker til kanonisk eierfil. Delte regler, standardverdier og prosessdetaljer skal fortsatt eies av delte guider eller styringsfiler, ikke av privat pref.
+- `DV-KIITOS-25`: Prosjektets `.kiitos/prosjektinstruks.md` skal eie prosjektets formål, avgrensning, autoritative kilder, kontrakter, lokale arbeidsregler og nødvendige pekere. Den skal ikke kopiere hele oppstartskjeden eller felles Kiitos-regler fra fyr, laug eller ruff.
+- `DV-KIITOS-26`: `AGENTS.md` i prosjektroten skal være en kort og verktøynøytral portal til nærmeste `.kiitos/prosjektinstruks.md`. Når prosjektet åpnes alene, kan prosjektnært arbeid fortsette på grunnlag av den lokale instruksen; manglende felles Kiitos-kontekst skal opplyses før tverrprosjektlige eller laugsovergripende vurderinger.
+- `DV-KIITOS-27`: Når personlig ruff og aktivt laug uttrykker ulike preferanser for arbeidsstil, har ruff forrang. Sikkerhetskrav, kildefakta, tekniske kontrakter og uttrykkelige prosjektgrenser er ikke preferanser og kan ikke oppheves av ruff.
+- `DV-KIITOS-28`: GitHub Copilots alltid aktive instruks skal være ett arbeidsromsspesifikt kompilat i laugets `.github/copilot-instructions.md`. Manifest og kompilator versjoneres; kompilatet genereres lokalt, ignoreres av Git og skal ikke redigeres manuelt. Kompilatoren finner fyr, aktivt laug og den enkelte brukerens eventuelle `kiitos.ruff.*` via brukerens lokale `.code-workspace`; en delt laugskonfigurasjon skal aldri hardkode én persons ruff. Andre faste workspace-røtter skal ikke ha konkurrerende `copilot-instructions.md`.
+- `DV-KIITOS-29`: Laugets mappe er arbeidsrommets logiske eierrot og eier `.code-workspace`, kompilatmanifest og arbeidsromsfelles konfigurasjon. Mapper i `.code-workspace` er likevel separate tekniske VS Code-røtter, selv når de presenteres som deler av samme logiske benk.
+- `DV-KIITOS-30`: Kritiske arbeidsromsvalg skal ligge i `.code-workspace` og være uavhengige av VS Code-profil. Profiltilknytning brukes som brukerkomfort, ikke som eneste bærer av sikkerhets-, godkjennings- eller instruksinnstillinger.
 
 ## Kodekartlegging fra gen4
 

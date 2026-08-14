@@ -7,7 +7,7 @@ Denne guiden definerer evalueringsprinsippene for kiitos.fyr, basert på Per Øy
 - **Formål**: Sikre at alle evalueringer i kiitos.fyr er systematiske, nyttige og i tråd med internasjonale standarder
 - **Omfang**: Alle evalueringsaktiviteter i fyr-, laug- og prosjektlag
 - **Eier**: Denne guiden eies av fyr-laget og kan utvides lokalt i laug og prosjekter
-- **Kanoniske referanser**: [preferanser.md](preferanser.md), [instruksintegritet.md](instruksintegritet.md), [designvalg.md](designvalg.md)
+- **Kanoniske referanser**: [preferanser.md](preferanser.md), [instruksintegritet.md](instruksintegritet.md), [styringsgrunnlag/designvalg.md](../styringsgrunnlag/designvalg.md)
 
 ## Bastøes fem forutsetninger
 
@@ -22,7 +22,7 @@ Hver evaluering må ha tydelig definert:
 
 **Implementering i kiitos**:
 - Opprett `evaluering-formaal.md` i prosjektets `.kiitos/`-mappe
-- Bruk malen fra [maler/evaluering-formaal-mal.md](../../maler/felles/evaluering-formaal-mal.md)
+- Bruk malen fra [maler/felles/evaluering-formaal-mal.md](../maler/felles/evaluering-formaal-mal.md)
 - Formålet må godkjennes av prosjekteier før evaluering starter
 
 ### 2. Avklaring av omfang og metode
@@ -46,7 +46,7 @@ Evalueringsprosessene må være:
 
 **Implementering i kiitos**:
 - Følg arbeidsflyten definert i [guide/evalueringsflyt.md](evalueringsflyt.md)
-- Bruk standardene fra [styringsgrunnlag/evalueringsstandarder.md](../../styringsgrunnlag/evalueringsstandarder.md)
+- Bruk standardene fra [styringsgrunnlag/kvalitetsstandard-evaluering.md](../styringsgrunnlag/kvalitetsstandard-evaluering.md)
 - Alle evalueringer skal loggføres i `journal/evalueringer/`
 
 ### 4. Kvalitetsstandard
@@ -57,7 +57,7 @@ Det må etableres en kvalitetsstandard for evalueringsarbeidet som inkluderer:
 - **Kvalitetsmåling**: Indikatorer for evalueringskvalitet
 
 **Implementering i kiitos**:
-- Kvalitetsstandarden er definert i [styringsgrunnlag/kvalitetsstandard-evaluering.md](../../styringsgrunnlag/kvalitetsstandard-evaluering.md)
+- Kvalitetsstandarden er definert i [styringsgrunnlag/kvalitetsstandard-evaluering.md](../styringsgrunnlag/kvalitetsstandard-evaluering.md)
 - Bruk kvalitetssjekken `/maskin evaluering-kvalitet`
 - Alle evalueringer skal ha en kvalitetsvurdering
 
@@ -135,7 +135,7 @@ Bruk `/maskin evaluering-valider` for automatisk validering.
 | Avvik | Løsning |
 |-------|---------|
 | Uklart evalueringsformål | Gå tilbake til Forutsetning 1, avklar formål |
-| Mangler systematisk prosess | Bruk malen i [maler/evalueringsflyt-mal.md](../../maler/felles/evalueringsflyt-mal.md) |
+| Mangler systematisk prosess | Bruk malen i [maler/felles/evalueringsflyt-mal.md](../maler/felles/evalueringsflyt-mal.md) |
 | Evaluering ikke fulgt opp | Opprett handlingsplan og spor i `oppgaver/` |
 | Kvalitetsstandard ikke oppfylt | Gjennomfør kvalitetssjekk med `/maskin evaluering-kvalitet` |
 | Lærdommer ikke delt | Legg til i `guide/lærdommer/` eller prosjektets `.kiitos/lærdommer/` |
@@ -151,9 +151,9 @@ Bruk `/maskin evaluering-valider` for automatisk validering.
 
 - [preferanser.md](preferanser.md)
 - [instruksintegritet.md](instruksintegritet.md)
-- [designvalg.md](designvalg.md)
-- [velkommen.md](velkommen.md)
+- [styringsgrunnlag/designvalg.md](../styringsgrunnlag/designvalg.md)
+- [velkommen.md](../velkommen.md)
 - [journal-system.md](journal-system.md)
-- [styringsgrunnlag/evalueringsstandarder.md](../../styringsgrunnlag/evalueringsstandarder.md)
-- [maler/evaluering-formaal-mal.md](../../maler/felles/evaluering-formaal-mal.md)
-- [maler/evalueringsflyt-mal.md](../../maler/felles/evalueringsflyt-mal.md)
+- [styringsgrunnlag/kvalitetsstandard-evaluering.md](../styringsgrunnlag/kvalitetsstandard-evaluering.md)
+- [maler/felles/evaluering-formaal-mal.md](../maler/felles/evaluering-formaal-mal.md)
+- [maler/felles/evalueringsflyt-mal.md](../maler/felles/evalueringsflyt-mal.md)

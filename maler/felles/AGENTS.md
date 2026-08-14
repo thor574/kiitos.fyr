@@ -1,6 +1,8 @@
-# AGENTS.md (laugrot)
+# AGENTS.md (laugrotmal)
 
-Denne fila gjelder for hele katalogtreet under denne rota.
+Denne fila er en mal for laugets rot. Når fila leses på sin nåværende plass under `kiitos.fyr/maler/felles/`, gjelder fyrets `../../velkommen.md` som operativ inngang.
+
+Etter at fila er kopiert til rota av et laug, gjelder den for hele katalogtreet under den nye rota.
 
 For operative instrukser i dette lauget:
 1. Les `./velkommen.md`.

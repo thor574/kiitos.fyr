@@ -19,7 +19,7 @@ Denne guiden definerer hvordan kiitos.fyr fremmer en organisasjons- og læringsk
 ### 2. Deling
 - **Når**: Umiddelbart etter evalueringens avslutning
 - **Hvordan**: Strukturert dokumentasjon i `lærdommer/[navn].md`
-- **Format**: Bruk malen [maler/lærdom-mal.md](../../maler/lærdom-mal.md)
+- **Format**: Bruk malen [maler/felles/lærdom-mal.md](../maler/felles/lærdom-mal.md)
 
 ### 3. Handling
 - **Krav**: Hver anbefaling må ha en oppgave i `oppgaver/`

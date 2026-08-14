@@ -23,7 +23,7 @@ journal/
 ## Oppsett av ny journalflate
 
 1. Opprett strukturen over.
-2. Beskriv i rotens `copilot-instructions.md` hva arbeidsrommet handler om, hvilke mapper som er viktige, hva KI ikke skal røre uten beskjed, og at KI skal dokumentere all relevant dialog automatisk i journal.
+2. Beskriv arbeidsrommets formål, viktige mapper, grenser og journalregler i kanoniske fyr-, laug- eller prosjektkilder, og ta de nødvendige kildene inn i laugets `kiitos-kompilat.json`. Ikke rediger det genererte Copilot-kompilatet direkte.
 3. Pek til prosjektspesifikke instrukser når flere prosjekter deler samme arbeidsrom.
 4. Se arbeidsromnivåets operative inngang i `velkommen.md`.
 

@@ -11,7 +11,7 @@ Dette er den operative inngangen for arbeidsrommet `ARBEIDSROMNAVN`. Dette er et
 
 - Arbeidsrommet er en flerprosjekt-benk, ikke én prosjektrot.
 - Svar og dokumentasjon skal som hovedregel være på norsk (bokmål) når det passer.
-- Denne `velkommen.md` er kanonisk oppstartsflate for arbeidsrommet. Verktøyspesifikke portaler som `AGENTS.md`, `.github/copilot-instructions.md` eller brukerprofiler i andre KI-verktøy er tynne innganger som peker hit.
+- Denne `velkommen.md` er kanonisk oppstartsflate for arbeidsrommet. Verktøyspesifikke portaler som `AGENTS.md`, det lokale Copilot-kompilatet eller brukerprofiler i andre KI-verktøy skal hente eller peke hit.
 - Hvis en ny bruker mangler `kiitos.fyr` eller relevante prosjektmapper i arbeidsrommet, hjelp først med å få disse lagt til før vanlig arbeid starter.
 - Prosjektets `.kiitos/prosjektinstruks.md` er primær inngang for prosjektnær styring.
 - Hold deg til aktiv sak. Parker sidefunn i `oppgaver/`.

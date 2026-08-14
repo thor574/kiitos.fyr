@@ -1,35 +1,33 @@
 # Prosjektinstruks — PROSJEKTNAVN
 
-Denne filen er den operative inngangen for KI i dette prosjektet.
+Denne filen er den kanoniske inngangen til prosjektets lokale instrukser. Den skal være kort nok til å skumleses og bare inneholde prosjektspesifikk sannhet.
 
-## Prosjekttype
+Felles Kiitos-regler lastes fra det aktive arbeidsrommet og kopieres ikke hit. `AGENTS.md` i prosjektroten skal peke direkte til denne filen.
 
-<!-- Velg én: webapp | api | bibliotek | database | frontend | verktøy | annet -->
+## Formål og prosjektgrense
 
-## Kort beskrivelse
+<!-- Hva gjør prosjektet, og hva er uttrykkelig utenfor prosjektet? -->
 
-<!-- Hva gjør dette prosjektet? 1–2 setninger. -->
+## Autoritative kilder
 
-## Teknologistabel
+<!-- Hvilke filer, sider, spesifikasjoner eller eksterne kilder eier gjeldende sannhet? -->
 
-<!-- Eksempel: Java 17, Spring Boot 3, Maven, SQL Server -->
+## Før du endrer
+
+<!-- Bindende kontrakter, sikkerhetsgrenser og kontroller som alltid gjelder i prosjektet. -->
+
+## Teknisk ramme og validering
+
+<!-- Teknologistabel, bygg, kjøring og minste relevante tester. Fjern seksjonen for ikke-tekniske prosjekter. -->
 
 ## Viktige mapper og filer
 
-<!-- Pek ut de viktigste inngangsfilene for en ny utvikler. -->
-
-## Lokale kjøreinstrukser
-
-<!-- Hvordan bygger og kjører man prosjektet lokalt? -->
-
-## API- og databasekontrakter
-
-<!-- Hvilke kontrakter må respekteres? Hvilke felt, endepunkter eller tabeller er delte? -->
+<!-- Pek til de viktigste lokale inngangene. Ikke gjenta innhold som allerede eies der. -->
 
 ## Tverrprosjektlige avhengigheter
 
-<!-- Hvilke andre prosjekter i arbeidsrommet har dette prosjektet avhengigheter til? -->
+<!-- Hvilke andre prosjekter eller delte kontrakter kan bli berørt? -->
 
-## Lokale huskeregler
+## Lokale arbeidsregler
 
-<!-- Prosjektspesifikke regler som KI må vite om. -->
+<!-- Bare prosjektspesifikke regler. Felles arbeidsstil hører til fyr, laug eller ruff. -->
