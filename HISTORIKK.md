@@ -6,6 +6,8 @@ Denne fila gir et kort bilde av de viktigste generasjonsskiftene i kiitos. En ny
 
 Gen6 er en integritetsjustering av gen5 og en tilpasning til arbeid med flere KI-verktøy, særlig ChatGPT/Codex og GitHub Copilot.
 
+Gen6-harmoniseringen ble gjennomført i den nye ChatGPT-appen av **ChatGPT 5.6 Sol** med resonneringsnivået **Ekstra høy**. Arbeidet tok litt over fire timer og brukte omtrent en halv ukekapasitet. På dette tidspunktet viste ChatGPT forbruket mindre tydelig som KI-kreditter (kik) enn Copilot og Cursor. Derfor er både tids- og kapasitetsbruken tatt med som en del av milepælen.
+
 Dette bringer gen6:
 
 - samme kanoniske kunnskap brukes gjennom verktøytilpassede innganger, i stedet for at hvert KI-verktøy får sin egen konkurrerende sannhet;
