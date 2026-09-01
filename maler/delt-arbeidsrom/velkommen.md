@@ -16,7 +16,7 @@ Dette er den operative inngangen for arbeidsrommet `ARBEIDSROMNAVN`. Dette er et
 - Prosjektets `.kiitos/prosjektinstruks.md` er primær inngang for prosjektnær styring.
 - Hold deg til aktiv sak. Parker sidefunn i `oppgaver/`.
 - Ikke bryt API- eller databasekontrakter uten avklaring.
-- Når stabile ord, visjoner, mål eller arkitekturvalg avklares, løft til laveste riktige styringsfil.
+- Når stabile begreper, mål eller beslutninger avklares, løft dem til laveste riktige eierfil; se fyret → `guide/beslutninger.md`.
 - Plassering av innhold, personvern og journal-lag: se fyret → `guide/plassering.md`.
 
 ## Leserekkefølge

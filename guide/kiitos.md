@@ -67,7 +67,7 @@ Plasseringslogikk, personvernregler, journal-plassering og lagregel eies av [pla
 ## Viktige begrensninger
 
 - Ikke bryt API/DB-kontrakter uten avklaring.
-- Løft stabile ord, visjoner, mål og arkitekturvalg til laveste riktige styringsfil.
+- Løft stabile begreper, mål og beslutninger til laveste riktige eierfil.
 - Journalfiler er append-only under normalt arbeid.
 - Norske ord beholdes med korrekt rettskrivning — ikke ASCII-normaliser `æ`, `ø` eller `å`.
 - Hold deg til aktiv sak. Parker sidefunn i laugets `oppgaver/`.
@@ -76,6 +76,7 @@ Plasseringslogikk, personvernregler, journal-plassering og lagregel eies av [pla
 
 - Virksomhetsintro for alle: [virksomhetsintro/README.md](virksomhetsintro/README.md)
 - Plassering og personvern: [plassering.md](plassering.md)
+- Beslutningstyper, status og eierskap: [beslutninger.md](beslutninger.md)
 - Søkeregler og arbeidsmønstre: [effektiv-samhandling-med-ki.md](effektiv-samhandling-med-ki.md)
 - Instruksintegritet og helsesjekk av aktive flater: [instruksintegritet.md](instruksintegritet.md)
 - Skill-anatomi for maskiner: [skill-anatomi.md](skill-anatomi.md)

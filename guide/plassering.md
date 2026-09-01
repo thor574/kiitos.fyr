@@ -23,21 +23,26 @@ Ved tvil: velg laveste riktige lag. Løft oppover bare når innholdet er stabilt
 |---|---|---|
 | Universelle KI-instrukser og arbeidsmåter | Fyr | `kiitos.fyr/guide/` |
 | Universelle evalueringsprinsipper og standarder | Fyr | `kiitos.fyr/guide/evalueringsrammeverk.md` |
+| Universell modell for beslutningstyper og status | Fyr | `kiitos.fyr/guide/beslutninger.md` |
 | Prosjektspesifikke evalueringer | Prosjekt | `.kiitos/evaluering/` |
 | Evalueringsjournaler | Prosjekt | `.kiitos/journal/evalueringer/` |
 | Begreper og navnekonvensjoner | Fyr | `kiitos.fyr/styringsgrunnlag/begrepsmatrise.md` |
-| Designvalg og universelle føringer | Fyr | `kiitos.fyr/styringsgrunnlag/designvalg.md` |
+| Gjeldende universelle Kiitos-valg | Fyr | Relevant guide eller `kiitos.fyr/styringsgrunnlag/designvalg.md` |
 | Skills (delte) | Fyr | `kiitos.fyr/.github/skills/` |
 | Laugspesifikke guider | Laug | `<laug>/guide/` |
 | Laugspesifikke skills | Laug | `<laug>/.github/skills/` |
 | Styringsgrunnlag for lauget | Laug | `<laug>/styringsgrunnlag/` |
+| Laugspesifikke beslutninger | Laug | Relevant guide eller fil i `<laug>/styringsgrunnlag/` |
 | Parkerte oppgaver og sidefunn | Laug | `<laug>/oppgaver/` |
 | Prosjektnær kunnskap og kontrakter | Prosjekt | `.kiitos/prosjektinstruks.md` |
+| Prosjektspesifikke beslutninger | Prosjekt | Relevant faglig eierfil under `.kiitos/` |
 | Prosjektspesifikke oppgaver | Prosjekt | `.kiitos/oppgaver/` |
 | Personlige preferanser (pref-fil) | Ruff / lokal | `kiitos.ruff.*/.github/copilot-kiitos-pref.md` eller git-ignorert i laug |
 | Personlig rollebeskrivelse | Ruff / lokal | `kiitos.ruff.*/guide/min-rolle.md` eller `guide/min-rolle-lokalt.md` |
 | Brukerprivate oppgaver | Ruff / lokal | `kiitos.ruff.*/oppgaver/` eller `oppgaver.mine/` |
 | Personlig kompetanselogg | Ruff / lokal | `kiitos.ruff.*/kompetanse/` eller `kompetanse.min/` |
+
+Beslutningstypen bestemmer ikke laget; virkeområdet gjør det. Typer, statuser og minimumsfelt eies av [beslutninger.md](beslutninger.md). Opprett bare en generell `beslutninger.md` når ingen mer presis faglig eierfil finnes.
 
 ## Personvern og arbeidsrelasjoner
 

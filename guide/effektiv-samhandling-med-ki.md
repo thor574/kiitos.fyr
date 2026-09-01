@@ -248,7 +248,8 @@ for den saken. Bruk dette til å betale tilbake til dokumentasjonen **før samta
 |---|---|
 | Prosjektspesifikke guider (arkitektur, datamodell, prosess) | Prosjektets `.kiitos/guide/` |
 | Nye begreper eller ord | Prosjektets `.kiitos/styringsgrunnlag/domenevokabular.md` |
-| Nye arkitektur- eller designbeslutninger | Prosjektets `.kiitos/styringsgrunnlag/arkitekturvalg.md` |
+| Nye gjeldende prosjektbeslutninger | Laveste relevante eierfil under prosjektets `.kiitos/`; se `guide/beslutninger.md` |
+| Historisk beslutningsgrunnlag | Prosjektets journal eller ARV-flate når hendelsesforløpet må bevares |
 | Universelle KI-praksiser (dette) | `kiitos.fyr/guide/` |
 | Tverrgående laugserfaringer | `kiitos.laug.*/guide/` eller `journal/` |
 | Sesjonskostnad og lærdom | Prosjektets `.kiitos/journal/` |
