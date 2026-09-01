@@ -1,10 +1,12 @@
 ﻿# Journal for universet
 
-Denne mappen er journalflaten for universsaker i `kiitos`.
+Denne mappen er den offentlige journalflaten for universsaker i `kiitos`.
 
 Bruk denne når saken gjelder den delbare kiitos-kjernen, tverrlaug arbeidsmåter eller annen styring som skal kunne gjenbrukes på tvers av laug.
 
 Operativt journalformat og nivåregler eies av [guide/journal-system.md](../guide/journal-system.md).
+
+Journalen skal være sanitert og destillert. Den skal dokumentere formål, beslutninger, endringer og verifikasjon, men ikke være en kopi av samtaler eller inneholde private person-, konto- eller tilgangsopplysninger.
 
 Kanonisk universstyring i denne laugmodellen ligger parallelt i [../styringsgrunnlag/](../styringsgrunnlag/).
 

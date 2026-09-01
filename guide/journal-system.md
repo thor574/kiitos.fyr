@@ -1,6 +1,52 @@
 ﻿# Journal-system for univers, arbeidsrom og prosjekt
 
-Denne guiden beskriver hvordan saker journalføres på riktig nivå i kiitos-modellen.
+Denne guiden beskriver hvordan saker journalføres på riktig nivå og med riktig synlighet i kiitos-modellen.
+
+## Grunnregel
+
+Journalføring skal bevare beslutninger, endringer og læring uten å gjøre samtalen til et offentlig arkiv.
+
+Før KI skriver en journalpost, skal den klassifisere både:
+
+1. **Lag:** fyr, laug, ruff eller prosjekt.
+2. **Synlighet:** offentlig, delt/internt eller privat.
+
+Lag og synlighet er to forskjellige vurderinger. En sak kan være universell uten at alle detaljene i samtalen kan publiseres.
+
+## Synlighetsnivå
+
+| Synlighet | Journalform | Typisk innhold |
+|---|---|---|
+| Offentlig | Sanitert og destillert saksjournal | Formål, beslutninger, endringer, verifikasjon og offentlige kilder |
+| Delt/internt | Målgruppetilpasset saksjournal | Det teamet trenger, med minst mulig person- og tilgangsdetaljer |
+| Privat | Privat saksjournal eller dialogjournal | Kan inneholde ordrett dialog når det er nyttig og brukeren har godkjent det |
+
+`kiitos.fyr` er offentlig. Journalen her skal derfor aldri være en automatisk kopi av samtalen.
+
+## Dette skal ikke publiseres
+
+- passord, nøkler, tokens, sesjonsdata eller andre autentiseringsopplysninger
+- private tilgangsavtaler, kontobytter eller detaljert feilsøking av innlogging og rettigheter
+- e-postadresser, telefonnumre, adresser eller andre unødige personidentifikatorer
+- helseopplysninger, familieforhold, privatøkonomi, relasjoner eller personvurderinger
+- ikke-offentlig sikkerhets-, system- eller organisasjonsinformasjon
+- fullstendige råutskrifter av samtaler
+
+Bevisst offentlige identifikatorer, som navnet på et offentlig GitHub-repo eller dets offentlige eierkonto, kan brukes når de er nødvendige for å forstå saken. De er ikke det samme som tilgangsopplysninger.
+
+Ved tvil skal innholdet holdes privat eller brukeren spørres før publisering.
+
+## Kontroll før offentlig publisering
+
+Før commit eller opplasting til et offentlig repo skal KI:
+
+1. lese hele diffen som skal publiseres
+2. søke etter hemmeligheter, personopplysninger og konto-/tilgangsdetaljer
+3. fjerne, generalisere eller flytte privat innhold til privat lag
+4. kontrollere at kilder og lenker i seg selv kan deles offentlig
+5. stoppe og spørre brukeren hvis klassifiseringen fortsatt er usikker
+
+Automatisk commit gjelder bare etter at denne kontrollen er bestått.
 
 ## Struktur
 
@@ -12,167 +58,90 @@ journal/
         └── åååå-mm-dd tema.md
 ```
 
-Tverrgående kiitos-saker for arbeidsrommet journalføres i:
+Prosjektsaker journalføres i prosjektets lokale `.kiitos/journal/` når prosjektet er migrert. Laugsaker og private saker bruker tilsvarende journalmappe i riktig laug eller ruff.
 
-```text
-journal/
-    └── åååå-mm/
-        └── åååå-mm-dd tema.md
+## Offentlig og delt saksjournal
+
+Bruk dette formatet i offentlige journaler og som normalformat i delte journaler:
+
+```markdown
+# [Kort sakstittel]
+
+## Formål
+[Hva saken skulle oppnå, uten å sitere hele instruksen.]
+
+## Beslutninger
+- [Beslutning og kort begrunnelse]
+
+## Endringer
+- [Fil eller flate og hva som ble endret]
+
+## Verifikasjon
+- [Hva som ble kontrollert og resultatet]
+
+## Kilder
+- [Bare offentlige eller delbare kilder]
 ```
 
-## Oppsett av ny journalflate
+Ta bare med seksjoner som tilfører verdi. Nye opplysninger legges normalt nederst, og historikk endres ikke uten en uttrykkelig grunn.
 
-1. Opprett strukturen over.
-2. Beskriv arbeidsrommets formål, viktige mapper, grenser og journalregler i kanoniske fyr-, laug- eller prosjektkilder, og ta de nødvendige kildene inn i laugets `kiitos-kompilat.json`. Ikke rediger det genererte Copilot-kompilatet direkte.
-3. Pek til prosjektspesifikke instrukser når flere prosjekter deler samme arbeidsrom.
-4. Se arbeidsromnivåets operative inngang i `velkommen.md`.
+## Privat dialogjournal
 
-## Journal-format
-
-KI dokumenterer automatisk all dialog på riktig nivå:
-
-- universsaker i `journal/åååå-mm/åååå-mm-dd tema.md`
-- tverrgående kiitos-saker i `journal/åååå-mm/åååå-mm-dd tema.md`
-- prosjektsaker i prosjektets lokale `.kiitos/journal/åååå-mm/åååå-mm-dd tema.md` når prosjektet er migrert
-
-### Felles grunnformat (alltid)
-
-Bruk dette i alle journaler:
+Ordrett dialog kan brukes i en privat journal når den er nødvendig for sporbarhet, og brukeren har godkjent lagringen:
 
 ```markdown
 # KI-instruks 1
-> [Din instruks, ordrett]
+> [Instruks ordrett]
 
-[KI sitt svar i vanlig tekst]
-
-
-
-# KI-instruks 2
-> [Neste instruks, ordrett]
-
-[KI sitt svar i vanlig tekst]
+[KI-svar eller saksnotat]
 ```
 
-Regler:
+Regler for privat dialogjournal:
 
-- Overskrift skal være `# KI-instruks N`
-- Brukerinstruks skal stå ordrett i blockquote (`>`)
-- Brukerinstruks skal ikke parafraseres, forkortes eller normaliseres; behold tegnsetting, mellomrom og ordvalg slik de ble skrevet
-- Journalen skal ha fullstendig oversikt over alle brukerinstrukser i samme sak, i kronologisk rekkefølge
-- KI-svar skal stå i vanlig tekst, ikke i blockquote
-- Det skal være tre tomme linjer mellom dialogledd
-- Nye dialogledd skal alltid legges nederst i journalfilen
-- Journalfiler behandles som append-only under normalt arbeid
-- Ved redigering med patch: finn siste `# KI-instruks` i filen og sett inn ny seksjon etter siste eksisterende seksjon
-- Problemseksjoner i KI-svar skal bruke nivå 2 med beskrivende tittel: `## Problem: [kort beskrivende tittel]`
-- Ved enkle svar kan `### Status` utelates; status kan da skrives som vanlig avsnitt i KI-svaret
-- Når KI stiller avklaringsspørsmål som påvirker senere brukerinstruks, skal spørsmålet tas med under KI-svaret
-- Ved flytting eller sletting av journaler eller annet historisk innhold skal målfilene først verifiseres på målplassen før kilden slettes
-- Unngå wildcard-baserte `Move-Item`-mønstre i PowerShell når historisk innhold flyttes; bruk eksplisitte mål og verifiser resultatet først
-- Hvis det oppdages manglende instrukser i ettertid, skal de etterføres ordrett nederst i filen som et nytt `# KI-instruks N`-ledd med kort notat om at leddet er etterført
-- Ikke sett inn nye KI-instrukser midt i en eksisterende journalfil med mindre bruker eksplisitt ber om rekonstruksjon eller opprydding av hele filen
-- Hvis ordrett tekst ikke er tilgjengelig i kontekstvinduet, skal journalen eksplisitt merke dette og be om bekreftelse før rekonstruksjon
-- Hvis journalføring trenger oppslag i store transcriptfiler, spesielt under `workspaceStorage/.../transcripts/*.jsonl`, skal filen leses i små biter på omtrent 30 linjer av gangen i stedet for store blokker
-- Ved journalføring av feil der stacktrace er relevant, skal stacktracen forkortes til én linje i formatet `[stacktrace: <mest signifikante melding>]`
-- I feilrettingssamtaler skal KI be om saksnummer før journalføring hvis brukeren ikke allerede har oppgitt det
-- Standardregelen er at KI etter journalføring skal gi et kort commit-forslag når brukeren ikke har bedt om noe annet. Standardformatet er `fix(<område>) <prosjektkode><saksnr> <beskrivelse>`, der område, prosjektkode og saksnummer byttes ut med arbeidsrommets konvensjoner, og beskrivelse er en svært kort oppsummering.
-- Hvis et arbeidsrom eksplisitt har erklært automatisk git-commit etter journalføring i sin lokale `installasjon.md` eller tilsvarende operative eierfil, skal KI etter ferdig journal og eventuell bekreftet opprydding kjøre `git add -A` og en vanlig `git commit` i repoen som arbeidsrommet har pekt ut. Commitmeldingen skal være kort og passe til hovedutfallet i saken. Hvis arbeidsrommet ikke har oppgitt en mer spesifikk stil, bruk `journal(<område>): <kort beskrivelse>`.
+- Opplys tydelig at journalen inneholder ordrett dialog.
+- Lagre den bare i ruff, privat laug eller lokal git-ignorert flate.
+- Ta med minst mulig sensitivt innhold selv om flaten er privat.
+- Ikke opprett skjulte, midlertidige samtalelogger som standard.
+- Ikke rekonstruer manglende ordrett tekst fra usikre transcriptkilder.
 
-### Enkel dialog
+## Historikk og rettelser
 
-For korte spørsmål holder grunnformatet over.
+Journalfiler er append-only under normalt arbeid. Personvern- og sikkerhetsrettelser er et eksplisitt unntak: innhold som ikke skulle vært publisert kan saniteres eller fjernes etter brukerens godkjenning. Dokumenter hva slags rettelse som ble gjort, men ikke gjenta det sensitive innholdet.
 
-### Kompleks dialog
+Ved flytting eller sletting av historisk innhold skal målfilen verifiseres før kilden fjernes. Unngå wildcard-baserte flyttinger når mål og omfang ikke er entydige.
 
-For komplekse oppgaver med kodeendringer, behold grunnformatet og legg til struktur i KI-svaret:
+## Journalføring i arbeidsflyten
 
-```markdown
-# KI-instruks 7
-> [Din instruks, ordrett]
+- Journalfør utfallet av saken, ikke hvert dialogledd.
+- Hold deg til aktiv sak; parker sidefunn i riktig oppgavemappe.
+- Bruk korte, konkrete formuleringer og korrekt norsk.
+- Ved feil kan én relevant feilmelding tas med, men fjern tokens, stier og identifikatorer som ikke trengs.
+- I feilrettingssaker kan saksnummer brukes når det er relevant og offentlig/delbart.
+- Evalueringsjournaler følger `guide/evalueringsrammeverk.md`.
+- Samme endring skal ikke journalføres i fulltekst på flere nivåer.
 
-## Problem: [kort beskrivende tittel]
-[Hva skulle løses?]
+Etter journalføring kan KI foreslå en kort commitmelding. Dersom et arbeidsrom uttrykkelig tillater automatisk commit, skal publiseringskontrollen over gjennomføres først.
 
-### Symptomer / Årsak / Løsningsstrategi
-[Analyse av problemet]
+## Nivåregel
 
-### Endringer Utført
-- [velkommen.md](../velkommen.md) - Endring beskrivelse
-- [journal-system.md](journal-system.md) - Endring beskrivelse
+- Universelle endringer og tverrlaug arbeidsmåter hører hjemme i `kiitos.fyr/journal/` i sanitert form.
+- Laugsaker hører hjemme i laugets journal, tilpasset laugets synlighet og målgruppe.
+- Lokale prosjektsaker hører hjemme i prosjektets egen `.kiitos/journal/`.
+- Personlige og sensitive saker hører hjemme i privat ruff, privat laug eller lokal git-ignorert journal.
 
-### Status
-✅ Fullført / 🔄 Pågående / ⏸️ Blokkert
-
-### Referanser
-- Lenker til relaterte filer
-- Lenker til relaterte journaler
-
-### Notater
-[Ekstra kontekst]
-
-## KI-avklaringsspørsmål
-[Avklaringsspørsmål]
-```
-
-### Nøkkelprinsipper
-
-- Regler er førende: følg punktlisten over fullt ut, ikke lag alternative varianter av formatet.
-- Nivåtilpass KI-svar: enkle spørsmål får korte svar, komplekse oppgaver får strukturert oppsummering.
-- Automatisk og fortløpende: journalføring skjer uten ekstra beskjed og legges løpende nederst i samme fil.
-- Append-only først: hvis kronologi eller nummerering ser skjev ut, legg neste ledd nederst og parker eventuell filopprydding separat.
-- Korrekt norsk: behold `æ`, `ø` og `å` i journaltekst, med mindre et konkret teknisk krav tvinger noe annet.
-- Evalueringsjournaler skal følge formatet definert i `guide/evalueringsrammeverk.md` og lagres i `journal/evalueringer/`
+Den fullstendige plasseringsregelen eies av [plassering.md](plassering.md).
 
 ## Avslutningsopprydding
 
 Når en samtale både journalføres og avsluttes:
 
-1. Skriv journalen ferdig først.
-2. Slett oppgavefiler som ble løst i samtalen og ikke lenger representerer arbeid som gjenstår.
-
-Behold eller la være å slette filer bare når bruker eksplisitt ber om det, eller når det er tvil om filen fortsatt har en aktiv rolle.
-
-## Kandidatforslag ved journalføring
-
-- Før spørsmål om løste oppgavefiler skal KI sjekke relevante oppgavefiler og foreslå kandidater, eller si eksplisitt at ingen peker seg ut.
-- Brukeren avgjør fortsatt hva som skal slettes eller beholdes, men KI skal ikke overlate filidentifisering helt til brukeren når arbeidsrommet allerede gir tydelige spor.
-
-## Tips for oppstart
-
-### Lokalt først
-
-Ved etablering av nye prosjektjournaler kan teamet starte lokalt:
-
-- Lokal mappe utenfor repo hvis journalen ikke skal deles ennå
-- Eller lokal `.kiitos/journal/` som ignoreres i Git til rutinene sitter
-
-### Senere: Delt journal
-
-Når format og bruk sitter, kan journalen deles:
-
-- i prosjektets lokale `.kiitos/journal/`
-- eller i `journal/` for tverrgående saker
-
-## Klart språk i kode og dokumentasjon
-
-- Brukervennlige tekster: skriv enkelt og forståelig.
-- Aktiv form: "Systemet lagrer data" i stedet for "Data blir lagret".
-- Kort og konsist: fjern unødvendige ord.
-- Konkret språk: vær spesifikk og unngå vage formuleringer.
-- Konsistent terminologi: bruk samme begreper for samme konsepter.
-- Referanse: se klarspråk.no for veiledning.
-
-## Nivåregel
-
-- Universsaker som endrer den delbare kiitos-kjernen, tverrarbeidsromlige arbeidsmåter eller annen styring som skal kunne gjenbrukes på tvers av arbeidsrom, hører hjemme i `journal/`.
-- Tverrgående kiitos-saker med konsekvens på tvers av flere prosjekter i denne benken, eller som endrer selve arbeidsromsopplegget, `guide/`, `guide/` eller annen delt arbeidsmåte i denne benken, hører hjemme i `journal/`.
-- Lokale prosjektsaker skal journalføres i prosjektets egen journal når prosjektet er migrert.
-- Samme endring skal ikke journalføres i fulltekst på flere nivåer.
+1. Skriv og kontroller journalen.
+2. Foreslå oppgavefiler som er løst og ikke lenger representerer arbeid som gjenstår.
+3. Slett bare når brukeren har bedt om det eller det følger tydelig av den avtalte arbeidsflyten.
 
 ## Fordeler
 
-- Teamet kan lese hva KI har gjort.
-- Historikken over beslutninger og løsninger bevares.
-- Arbeid er lett å gjenoppta senere.
-- Påmønstring av nye teammedlemmer blir enklere.
-- Læring deles automatisk mellom teammedlemmer.
+- Beslutninger og begrunnelser er sporbare.
+- Offentlig dokumentasjon kan gjenbrukes uten å eksponere samtalen.
+- Privat kontekst forblir i riktig lag.
+- Arbeid er lett å gjenoppta og etterprøve.

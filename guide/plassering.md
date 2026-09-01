@@ -10,7 +10,7 @@ Kanonisk eier for all plasseringslogikk i kiitos. Alle andre filer skal peke hit
 
 Når KI skal opprette eller oppdatere en fil, avgjør riktig lag slik:
 
-1. **Inneholder det navn, vurderinger av personer eller arbeidsrelasjoner?** → Privat (ruff eller git-ignorert lokal fil).
+1. **Inneholder det personopplysninger, privat dialog, konto-/tilgangsdetaljer eller vurderinger av personer og arbeidsrelasjoner?** → Privat (ruff eller git-ignorert lokal fil), eller saniter innholdet før deling.
 2. **Er det prosjektnært (én kodebase, étt system)?** → Prosjekt (`.kiitos/`).
 3. **Er det laugspesifikt (gjelder dette laget/teamet)?** → Laug.
 4. **Gjelder det på tvers av alle laug?** → Fyr (universelt).
@@ -46,29 +46,29 @@ Beslutningstypen bestemmer ikke laget; virkeområdet gjør det. Typer, statuser 
 
 ## Personvern og arbeidsrelasjoner
 
-Navn, persondetaljer og beskrivelser av arbeidsrelasjoner er alltid private. Regelen gjelder også under intervjuer, gjennomganger og refleksjonssambaler:
+Persondetaljer og beskrivelser av arbeidsrelasjoner er private. Regelen gjelder også under intervjuer, gjennomganger og refleksjonssamtaler:
 
 - **Sensitive observasjoner** om enkeltpersoner (atferd, relasjoner, personlige vurderinger) → ruff eller lokal git-ignorert fil. Skal aldri skrives til fyr (offentlig) eller laug (delt).
 - **Positive observasjoner om laget som helhet** (rollefunksjoner, rutiner, prosesser) → laug, forutsatt at de ikke identifiserer enkeltpersoner negativt.
 - Navn brukes kun som formelle rolleidentifikatorer i delte laugfiler (f.eks. kontaktpunkter i `guide/ansvar.md`), aldri som vurderingsobjekter.
 
-Navn, persondetaljer og beskrivelser av arbeidsrelasjoner er alltid private:
-
-- **Lagres kun i privat område** (`kiitos.ruff.<bruker>` eller lokale, git-ignorerte filer).
-- Skal **aldri** skrives til delte flater (`kiitos.fyr/`, `kiitos.laug.*`, delte guider eller styringsgrunnlag).
-- Når KI oppretter eller oppdaterer filer med personopplysninger, skal den aktivt velge riktig privat plassering og bekrefte overfor brukeren at informasjonen holdes privat.
-- Hvis brukeren nevner kolleganavn i en samtale der det ikke finnes privat område, skal KI varsle om at navnene ikke kan lagres varig uten privat flate.
+- Personopplysninger lagres bare i privat område (`kiitos.ruff.<bruker>` eller lokale, git-ignorerte filer).
+- Samtaler, kontobytter, private tilgangsavtaler og autentiseringsdetaljer skal ikke kopieres til delte flater.
+- Offentlig kjente navn og identifikatorer kan brukes som nødvendige fakta, for eksempel eieren av et offentlig repo. Unngå dem når saken kan beskrives uten.
+- Når KI oppretter eller oppdaterer filer med personopplysninger, skal den aktivt velge privat plassering og bekrefte overfor brukeren at informasjonen holdes privat.
 
 ## Journal-plassering
 
-Journaler er append-only under normalt arbeid. Riktig journal avgjøres av innholdets lag:
+Journaler er append-only under normalt arbeid, med personvern- og sikkerhetsrettelser som uttrykkelig unntak. Riktig journal avgjøres av både lag og synlighet:
 
 | Innhold | Journal |
 |---|---|
-| Tverggående kiitos-saker (universelle endringer, kalibrering mellom laug) | `kiitos.fyr/journal/` |
-| Laugsaker (guideendringer, oppgavegjennomgang, laugrevisjon) | `<laug>/journal/` |
+| Tverggående kiitos-saker (universelle endringer, kalibrering mellom laug) | Sanitert offentlig saksjournal i `kiitos.fyr/journal/` |
+| Laugsaker (guideendringer, oppgavegjennomgang, laugrevisjon) | Målgruppetilpasset saksjournal i `<laug>/journal/` |
 | Prosjektsaker (kodeendringer, feilretting, teknisk arbeid) | `.kiitos/journal/` |
-| Personlig journal (rollerefeksjon, private notater) | `kiitos.ruff.*/journal/` eller lokal git-ignorert journal |
+| Personlig journal, sensitiv kontekst eller ordrett dialog | `kiitos.ruff.*/journal/` eller lokal git-ignorert journal |
+
+Detaljert journalformat og publiseringskontroll eies av [journal-system.md](journal-system.md).
 
 ## Lagregel
 

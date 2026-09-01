@@ -9,14 +9,14 @@
 
 Systemissue observert i praksis: Når en KI-bruker gir en velspesifisert oppgave i samtalen, hopper KI over kiitos-instruksjoner og andre oppstartsmateriale som skulle leses eller gjøres tilgjengelig. Dette fører til:
 
-- ❌ Løpende loggføring fra start blir mistet
-- ❌ Ordrett instruksjonsholdbarhet over lengre samtaler
+- ❌ Viktige beslutninger og oppstartsutfall blir ikke dokumentert
+- ❌ Nødvendig instruksjonskontekst holder ikke gjennom lengre samtaler
 - ❌ Usikkerhet om hva som er lest/fulgt vs. hoppet over
 
 **Ønsket oppførsel:**
 - ✅ Instruksjoner skal kunne velges å leses eller hoppes over (valgfritt)
 - ✅ Bruker skal vite eksakt hvilke instruksjoner som ble lest
-- ✅ Loggføring av instruksjoner skal skje fra oppstart
+- ✅ Viktige oppstartsvalg og resultater skal journalføres på riktig synlighetsnivå
 - ✅ Instruksjoner skal ikke bli skjult av godt spesifiserte oppgaver
 
 ## Oppgaven
@@ -77,9 +77,9 @@ Opprett et testscenario der en helt ny bruker (eller simulator for ny bruker):
    - Hvis bruker gir både instruksjoner OG oppgave: instruksjoner først, eller oppgave første?
    - Burde oppgavespesifisering pausere instruksjonene, eller tvinge dem gjennom først?
 
-3. **Loggføring**
-   - Er det tydelig at hver instruksjonslinje skal logger til `/memories/session/instrukslogg.md`?
-   - Burde loggingen skje før eller etter at KI svarer?
+3. **Journalføring og personvern**
+   - Blir utfallet dokumentert uten at samtalen kopieres automatisk?
+   - Er offentlig rapport sanitert, og ligger eventuell ordrett testdialog bare i en godkjent privat flate?
 
 ## Akseptkriterie
 
@@ -90,6 +90,7 @@ Oppgaven er løst når:
 - [ ] Instruksjonslording på tvers av samtaler er verifisert å fungere korrekt
 - [ ] Valgfrihet for å lese/hoppe over instruksjoner er eksplisitt og testbar
 - [ ] Eventuell manglende instruksjonsholdbarhet er dokumentert som issue og prioritert for fix
+- [ ] Testresultatet er journalført uten å publisere rå chatutskrifter eller private tilgangsdetaljer
 
 ## Mulige årsaker til instruksjonshoppløp
 
@@ -97,7 +98,7 @@ Oppgaven er løst når:
 
 1. **Instruksjonene er for lange eller ambisiøse** — bruker hoppes over dem hvis oppgaven er velspesifisert
 2. **Portalen peker ikke klart nok til velkendte.md** — KI aktiverer instruksjonene aldri fordi de ikke er tydelig oppstartspunktet
-3. **`/memories/session/instrukslogg.md` er ikke klar nok** — KI glemmer at den skal logge hver instruksjon
+3. **Konteksten er ikke gjort varig på riktig nivå** — KI mangler et kort, sanitert spor av beslutninger og testresultater
 4. **Konflikt mellom instruksjonsmodus og oppgavemodus** — KI velger oppgave over instruksjon når begge gis
 5. **Instruksjonene sier ikke eksplisitt: "Les dette hver samtale"** — KI antar at første lesning er nok
 
@@ -105,7 +106,7 @@ Oppgaven er løst når:
 
 Når denne oppgaven fullføres, bør det følge en design/implementering som:
 - Gjør instruksjonvalgfriheten eksplisitt i cada ny samtale
-- Sikrer at instruksjonene logges om de velges
+- Sikrer at viktige oppstartsvalg og testresultater journalføres med riktig synlighet
 - Setter klare prioriteringsregler hvis instruksjon + oppgave gis samtidig
 - Vurderer om instruksjonene skal være _påkrevd lesing_ eller _valgfritt/anbefaltkvalitet_
 
@@ -114,4 +115,4 @@ Når denne oppgaven fullføres, bør det følge en design/implementering som:
 **Merknader:**
 - Denne oppgaven er ren analyse og test — ingen kodingendringer eller styringsoppdateringer er påkrevd før Fase 1–3 er ferdig
 - Test hele scenarioene med faktisk bruker eller AI-simulator, ikke bare gjennomlesing
-- Rapport bør inkludere eksakte chatutskrifter fra Fase 2–3 for verifisering
+- Offentlig rapport skal bruke saniterte observasjoner. Eksakte chatutskrifter brukes bare i en godkjent privat testflate når de er nødvendige for verifisering.

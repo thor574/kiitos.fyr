@@ -14,7 +14,7 @@ Kiitos er et universelt KI-instruksrammeverk for VS Code. Denne filen er den ope
 - Når en ny bruker mangler hele kiitos-flaten, hjelp først med å hente/legge til nødvendige lag: `kiitos.fyr`, relevant `kiitos.laug.*`, eventuell `kiitos.ruff.*`, og deretter prosjektmapper. Start så trinnvis installasjon via [guide/installasjon.md](guide/installasjon.md) og gjør brukeren kjent med `/maskin oppia`.
 - Hold deg til aktiv sak. Parker sidefunn i laugets `oppgaver/`.
 - Vær økonomisk i bruk av KI: velg minste nødvendige instruksflate og rimeligste modell som løser saken, og spar tunge modelløp til uklare, tverrgående eller datatunge oppgaver.
-- Lagre brukerinstrukser fortløpende: for hver brukerinstruks i aktiv samtale, append den ordrette teksten til `/memories/session/instrukslogg.md` ved hjelp av memory-verktøyet (insert eller str_replace) før du svarer. Marker hvert ledd med et sekvensnummer og tidsstempel på formen `## N — ÅÅÅÅ-MM-DD`. Loggen brukes som kilde for ordrett sitering i journalen og for kontekstgjenoppretting etter komprimering. Filen slettes automatisk når samtalen avsluttes.
+- Ikke kopier samtaler eller brukerinstrukser automatisk til journal. Journalfør utfallet etter synlighet: offentlig og delt journal skal være sanitert og destillert; ordrett dialog kan bare lagres i privat flate når det er nyttig og godkjent. Se [guide/journal-system.md](guide/journal-system.md).
 - Norske ord beholdes med korrekt rettskrivning — ikke ASCII-normaliser `æ`, `ø` eller `å`.
 - Når stabile ord, visjoner, mål eller arkitekturvalg avklares, løft til laveste riktige styringsfil.
 - Plassering av innhold, personvern og journal-lag eies av [guide/plassering.md](guide/plassering.md).
