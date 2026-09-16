@@ -100,6 +100,27 @@ Hvis kiitos-roten eller laugets instruksfiler har endret seg siden forrige samta
 
 Deteksjon: Sjekk om `guide/`, `styringsgrunnlag/` eller `.github/skills/` i kiitos-roten eller lauget har filer med nyere endringstidspunkt enn forrige kjente samtale, eller bruk `git diff` mot forrige kjente tilstand når git er tilgjengelig. Varslingen er informativ — brukeren velger selv om de vil gjøre en gjennomgang.
 
+### 9. Åpningssignal — kiitos aktivert
+
+Etter at alle kiitos-filer er lastet inn (fyr, laug, ruff, prosjekt), vis et kort åpningssignal til brukeren som indikerer:
+- At kiitos-kontekst er aktivt
+- Hvor mange filer som ble lastet inn (som et grovt mål på instruksomfang)
+- Hvilke lag som ble lastet
+
+**Format:** `**Kiitos aktivert:** N filer fra [kilder]`
+
+**Eksempler:**
+- `**Kiitos aktivert:** 48 filer fra fyr + laug.kanalregistrene + ruff.th + k1`
+- `**Kiitos aktivert:** 35 filer fra fyr + laug.kanalregistrene + k2`
+- `**Kiitos aktivert:** 24 filer fra fyr + npi`
+
+**Tellingen skal omfatte:**
+- `guide/`, `styringsgrunnlag/`, `.kiitos/spesifikasjoner/`, og andre README/instrukskilder
+- Ikke binærfiler, test-mapper eller targetmapper
+- Viser *antall relevante instrukskilder*, som et signal om hvor omfattende konteksten er
+
+Hensikten er å gjøre kiitos synlig og transparrent — både for deg og dine kolleger — og å signalisere at vi nå jobber innenfor kiitos-rammeverket.
+
 ## Leserekkefølge
 
 1. Denne filen (universell inngang, deteksjonslogikk)
@@ -109,11 +130,15 @@ Deteksjon: Sjekk om `guide/`, `styringsgrunnlag/` eller `.github/skills/` i kiit
 5. Laugets `guide/kiitos.md` for prosjektkart
 6. Prosjektets `.kiitos/prosjektinstruks.md` når den finnes
 
-## Kanarifugl
+## Kanarifugl — avslutningssignal
+
+Hver gang du avslutter et svar, skal du inkludere en **kanarifugl-linje** på slutten. Dette er et motsvar til åpningssignalet og indikerer at kiitos-instruksene fortsatt er aktive og blir fulgt.
 
 - Avslutt alltid hvert svar med kanarifugl-linjen fra brukerens pref-fil når den er satt.
 - Pref-filen finnes i `kiitos.ruff.*/.github/copilot-kiitos-pref.md` (delt laug) eller laugets `.github/copilot-kiitos-pref.md` (privat laug).
-- Hvis pref-fila mangler eller ikke angir egen kanarifugl-linje, bruk standardlinjen: Instruksene vibrerer harmonisk til systemutviklerens sang
+- Hvis pref-fila mangler eller ikke angir egen kanarifugl-linje, bruk standardlinjen: **Instruksene vibrerer harmonisk til systemutviklerens sang**
+
+**Hensikt:** Åpningssignal + kanarifugl danner en symmetrisk ramme rundt hver samtale — tydelig start og stopp. Hvis kanarifuglen mangler, har instruksene blitt avbrutt eller erstattet.
 
 ## Aktive flater i kiitos
 
