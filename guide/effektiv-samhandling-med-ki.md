@@ -90,6 +90,12 @@ Hvordan redusere kostnader:
 - Bruk de største modellene når saken faktisk trenger bred lesing, mye inn- og utdata, tverrgående opprydding eller vanskelig syntese.
 - Legg gjerne tyngre ryddejobber til en egen månedsoppvask, for eksempel mot slutten av måneden, i stedet for å spre dem tilfeldig utover i småsaker.
 
+Tommelfingerregel for dataskala:
+- Høy tvetydighet + lavt volum: bruk KI først.
+- Lav tvetydighet + høyt volum: bruk script først.
+- Høy tvetydighet + høyt volum: bruk KI til regelutforming og avvikshåndtering, og script til bulk.
+- Se normativ føring i `DV-KIITOS-32` i `styringsgrunnlag/designvalg.md`.
+
 ## 3. Be om riktig svarform
 
 - «Kort svar, kun endringer og status.»

@@ -1,6 +1,6 @@
 # Designvalg for kiitos (universelt)
 
-## Sist revidert: 2026-08-13
+## Sist revidert: 2026-09-24
 
 Gjeldende universelle standarder og føringer for utforming av kiitos-modellen.
 Designvalg er normgivende og kan revideres, i motsetning til ARV-er som er historiske.
@@ -40,6 +40,7 @@ Når et stabilt og normgivende valg avklares i samtalen eller arbeidet, og det g
 - `DV-KIITOS-29`: Laugets mappe er arbeidsrommets logiske eierrot og eier `.code-workspace`, kompilatmanifest og arbeidsromsfelles konfigurasjon. Mapper i `.code-workspace` er likevel separate tekniske VS Code-røtter, selv når de presenteres som deler av samme logiske benk.
 - `DV-KIITOS-30`: Kritiske arbeidsromsvalg skal ligge i `.code-workspace` og være uavhengige av VS Code-profil. Profiltilknytning brukes som brukerkomfort, ikke som eneste bærer av sikkerhets-, godkjennings- eller instruksinnstillinger.
 - `DV-KIITOS-31`: **Gitinitialisering ved prosjektstart**: Når KI-assistenten startes på et nytt eller ukjent arbeidsprosjekt, skal første operasjonelle sjekk være: «Er dette repoet under git-versjonskontroll?» Hvis prosjektet mangler git-initialisering (ingen `.git/`-mappe), skal assistenten uten å anta svar spørre utvikleren: «Skal jeg initialisere git her for sikkerhetskopieringer og endringshistorikk?» Dette gjelder alle prosjekttyper — både små kjørbare eksperiment og større systemer. Formål: sikre at uunngåelige skrivefeil (som regex-ulykker, batch-kjøringer og manipulasjoner på rådata) kan gjenopprettes, og at endringshistorikk er tilgjengelig for læring og revisjoner.
+- `DV-KIITOS-32`: **Dataskala og utførelsesmotor**: For store, strukturerte datamengder skal kiitos som hovedregel bruke script som primær utførelsesmotor, mens KI brukes til avgrensing, regelutforming, kvalitetskontroll på utvalg og håndtering av avvik. KI skal ikke brukes som bulkmotor når samme resultat kan produseres deterministisk og rimeligere med script.
 
 ## Kodekartlegging fra gen4
 
